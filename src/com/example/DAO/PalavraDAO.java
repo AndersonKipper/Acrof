@@ -25,7 +25,7 @@ public class PalavraDAO extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase database) {
 
 		String ddl = "CREATE TABLE IF NOT EXISTS " + TABELA + "( " +
-				"id INTEGER PRIMARY KEY, " +
+				//"id INTEGER PRIMARY KEY, " +
 			    "palavra TEXT, " + 
 				"categoria TEXT)";
 
@@ -33,7 +33,8 @@ public class PalavraDAO extends SQLiteOpenHelper {
 		db.execSQL(ddl);
 		/*
 		if(this.quantRegistro() == 0){
-			cadastrarPalavras();
+			
+			//cadastrarPalavras();
 		}*/
 	}
 
@@ -50,7 +51,7 @@ public class PalavraDAO extends SQLiteOpenHelper {
 	public void cadastrarPalavras(){
 		try {
 		// Instancia um objeto do tipo File
-				File arquivo = new File("paises.txt");
+				File arquivo = new File("times.txt");
 				
 				
 					// Construtor de um FileReader (note o tratamento de IOException)
@@ -68,13 +69,15 @@ public class PalavraDAO extends SQLiteOpenHelper {
 					while (br.ready()) {
 						// Le a proxima linha
 						String linha = br.readLine();
-						db.execSQL("INSERT INTO " + TABELA + "(palavra, categoria) VALUES(" + linha + ", 'PAISES')");
+						db.execSQL("INSERT INTO " + TABELA + "(palavra, categoria) VALUES(" + linha + ", 'TIMES')");
 					}
 					
 					dbClose();
 					// Fecha os recursos (IMPORTANTISSIMO)
 					br.close();
 					fr.close();
+					
+					
 				} catch (IOException e) {
 					e.printStackTrace();
 				} 
@@ -101,7 +104,7 @@ public class PalavraDAO extends SQLiteOpenHelper {
 		
 		dbOpen();
 					
-		Cursor c = db.rawQuery("SELECT * FROM "+ TABELA +" ORDER BY ID", null);
+		Cursor c = db.rawQuery("SELECT palavra FROM "+ TABELA +" ORDER BY ID", null);
 
 		String a ="";
 
