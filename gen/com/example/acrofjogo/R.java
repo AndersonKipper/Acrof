@@ -25,7 +25,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f08001e;
+        public static final int action_settings=0x7f08001f;
         public static final int buttonA=0x7f080014;
         public static final int buttonB=0x7f080010;
         public static final int buttonC=0x7f08000e;
@@ -56,6 +56,7 @@ public final class R {
         public static final int tableRow1=0x7f080000;
         public static final int tableRow2=0x7f080013;
         public static final int tableRow3=0x7f08000b;
+        public static final int texto=0x7f08001e;
     }
     public static final class layout {
         public static final int activity_jogo=0x7f030000;

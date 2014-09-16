@@ -270,4 +270,12 @@
             android:textSize="10dp" />
     </TableRow>
 
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="82dp"
+        android:layout_y="227dp"
+        android:text="TextView" />
+
 </AbsoluteLayout>
