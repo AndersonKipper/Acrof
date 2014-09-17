@@ -23,11 +23,12 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
-        public static final int paisagem2=0x7f020001;
-        public static final int titulo=0x7f020002;
+        public static final int paisagem_120px=0x7f020001;
+        public static final int paisagem_padrao=0x7f020002;
+        public static final int titulo=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f080022;
+        public static final int action_settings=0x7f080025;
         public static final int buttonA=0x7f080014;
         public static final int buttonB=0x7f080010;
         public static final int buttonC=0x7f08000e;
@@ -55,8 +56,11 @@ public final class R {
         public static final int buttonX=0x7f08000d;
         public static final int buttonY=0x7f080006;
         public static final int buttonZ=0x7f08000c;
+        public static final int dificil=0x7f080024;
+        public static final int facil=0x7f080022;
         public static final int imageView1=0x7f080021;
         public static final int instrucoes=0x7f08001f;
+        public static final int medio=0x7f080023;
         public static final int novoJogo=0x7f080020;
         public static final int tableRow1=0x7f080000;
         public static final int tableRow2=0x7f080013;
@@ -64,8 +68,10 @@ public final class R {
         public static final int texto=0x7f08001e;
     }
     public static final class layout {
-        public static final int activity_jogo=0x7f030000;
-        public static final int activity_main=0x7f030001;
+        public static final int activity_categoria=0x7f030000;
+        public static final int activity_jogo=0x7f030001;
+        public static final int activity_main=0x7f030002;
+        public static final int activity_nivel=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f070000;

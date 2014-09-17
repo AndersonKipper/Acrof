@@ -2,6 +2,7 @@ package com.example.acrofjogo;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.widget.SearchViewCompat.OnCloseListenerCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -78,18 +79,11 @@ public class JogoActivity extends Activity {
 		
 		/* ##### INICIO DO TRATAMENTO DE EVENTO DOS BOTOES ##### */
 		
-		buttonQ.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonQ.getText());
-			}
-		});
-		buttonW.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonW.getText());
-			}
-		});
+		//outra forma
+		buttonQ.setOnClickListener(new Clique(buttonQ.getText().toString()));
+		
+		buttonW.setOnClickListener(new Clique(buttonW.getText().toString()));
+		
 		buttonE.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View view) {
@@ -248,6 +242,22 @@ public class JogoActivity extends Activity {
 	public void fazJogada(CharSequence letra){
 		TextView t = (TextView) findViewById(R.id.texto);
 		t.setText(letra);
+	}
+	
+	public class Clique implements OnClickListener{
+
+		String letra="";
+		public Clique(String letra) {
+			this.letra = letra;
+			
+		}
+
+		@Override
+		public void onClick(View v) {
+			fazJogada(letra);
+		}
+		
+		
 	}
 	
 
