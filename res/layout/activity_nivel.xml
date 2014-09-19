@@ -7,31 +7,37 @@
 
     <Button
         android:id="@+id/facil"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="184dp"
         android:height="55dp"
-        android:text="Fácil" />
+        android:text="Fácil"
+        android:width="280dp"
+        android:onClick="setFacil" />
 
     <Button
         android:id="@+id/medio"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/facil"
+        android:layout_centerHorizontal="true"
         android:height="55dp"
-        android:text="Médio" />
+        android:text="Médio"
+        android:width="280dp"
+        android:onClick="medio"  />
 
     <Button
         android:id="@+id/dificil"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/medio"
+        android:layout_centerHorizontal="true"
         android:height="55dp"
-        android:text="Difícil" />
+        android:text="Difícil"
+        android:width="280dp"
+        android:onClick="dificil" />
 
     <ImageView
         android:id="@+id/imageView1"
