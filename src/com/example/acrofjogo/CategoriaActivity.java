@@ -1,35 +1,48 @@
 package com.example.acrofjogo;
 
+
+
 import android.app.Activity;
+
+
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.widget.SearchViewCompat.OnCloseListenerCompat;
-import android.view.*;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
+public class CategoriaActivity extends Activity {
 
-public class MainActivity extends Activity {
-	public static String nivel = "NÍVEL > ";
-    private Button novoJogo;
+	private Button times;
+	private Button paises;
+	private TextView status;
+	
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		//startActivity(new Intent(this, NivelActivity.class));
-		//startActivity(new Intent(this, JogoActivity.class));
 		
+		setContentView(R.layout.activity_categoria);
+		status = (TextView) findViewById(R.id.nivel);
+		status.setText(MainActivity.nivel);
+		
+		
+		
+		
+		//startActivity(new Intent(this, JogoActivity.class));
 	}
+	
+	//metodo somente para TESTES
+	public void jogo(View v){
+		startActivity(new Intent(this, JogoActivity.class));
+	}
+	
 
-	public void novoJogo(View v){
-		startActivity(new Intent(this, NivelActivity.class));
-	}
-	
-	public void sair(View v){
-		finish();
-	}
-	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

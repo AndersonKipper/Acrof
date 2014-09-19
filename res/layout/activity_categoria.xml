@@ -2,77 +2,44 @@
 <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/paisagem_padrao"
+    android:background="@drawable/paisagem_efeito"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/Button02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="-223dp"
-        android:layout_y="0dp"
-        android:height="50dp"
-        android:text="Button"
-        android:width="140dp" />
+   
 
     <Button
-        android:id="@+id/Button03"
+        android:id="@+id/times"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="-223dp"
-        android:layout_y="0dp"
+        android:layout_x="11dp"
+        android:layout_y="164dp"
         android:height="50dp"
-        android:text="Button"
-        android:width="140dp" />
+        android:text="TIMES"
+        android:width="140dp"
+        android:onClick="jogo" 
+        style="@style/BootstrapButton"
+        android:textColor="@color/text"/>
+     <Button
+        android:id="@+id/paises"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="167dp"
+        android:layout_y="164dp"
+        android:height="50dp"
+        android:text="PAISES"
+        android:width="140dp"
+        android:onClick="jogo"
+        style="@style/BootstrapButton"
+        android:textColor="@color/text" />
 
-    <Button
-        android:id="@+id/Button05"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="-223dp"
-        android:layout_y="0dp"
-        android:height="50dp"
-        android:text="Button"
-        android:width="140dp" />
-
-    <Button
-        android:id="@+id/Button01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="160dp"
-        android:layout_y="160dp"
-        android:height="50dp"
-        android:text="Button"
-        android:width="140dp" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="12dp"
-        android:layout_y="160dp"
-        android:height="50dp"
-        android:text="Button"
-        android:width="140dp" />
-
-    <Button
-        android:id="@+id/Button04"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="12dp"
-        android:layout_y="228dp"
-        android:height="50dp"
-        android:text="Button"
-        android:width="140dp" />
-
-    <Button
-        android:id="@+id/Button06"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="162dp"
-        android:layout_y="228dp"
-        android:height="50dp"
-        android:text="Button"
-        android:width="140dp" />
+     
+     <TextView
+         android:id="@+id/nivel"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_x="105dp"
+         android:layout_y="14dp"
+         android:text=""
+         android:textSize="20dp" />
 
 </AbsoluteLayout>

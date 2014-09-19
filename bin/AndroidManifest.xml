@@ -22,7 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+        <activity
+            android:name="com.example.acrofjogo.NivelActivity" android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.acrofjogo.CategoriaActivity" android:screenOrientation="portrait" />
         <!-- Tela principal do jogo -->
         <activity android:name="com.example.acrofjogo.JogoActivity" android:screenOrientation="portrait" />
         

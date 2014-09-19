@@ -1,6 +1,7 @@
 package com.example.acrofjogo;
 
 import android.app.Activity;
+
 import android.os.Bundle;
 import android.support.v4.widget.SearchViewCompat.OnCloseListenerCompat;
 import android.view.View;

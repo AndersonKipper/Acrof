@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/paisagem_padrao"
+    android:background="@drawable/paisagem_efeito"
     android:orientation="vertical" >
 
     <Button
@@ -14,8 +14,10 @@
         android:layout_marginTop="184dp"
         android:height="55dp"
         android:text="Fácil"
-        android:width="280dp"
-        android:onClick="setFacil" />
+        android:width="260dp"
+        android:onClick="setFacil" 
+        style="@style/BootstrapButton"
+        android:textColor="@color/text" />
 
     <Button
         android:id="@+id/medio"
@@ -25,8 +27,10 @@
         android:layout_centerHorizontal="true"
         android:height="55dp"
         android:text="Médio"
-        android:width="280dp"
-        android:onClick="medio"  />
+        android:width="260dp"
+        android:onClick="medio"
+        style="@style/BootstrapButton"
+        android:textColor="@color/text"  />
 
     <Button
         android:id="@+id/dificil"
@@ -36,8 +40,10 @@
         android:layout_centerHorizontal="true"
         android:height="55dp"
         android:text="Difícil"
-        android:width="280dp"
-        android:onClick="dificil" />
+        android:width="260dp"
+        android:onClick="dificil"
+        style="@style/BootstrapButton"
+        android:textColor="@color/text" />
 
     <ImageView
         android:id="@+id/imageView1"
