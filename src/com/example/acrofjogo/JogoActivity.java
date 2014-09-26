@@ -10,7 +10,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.view.View.OnClickListener;
 
+
 public class JogoActivity extends Activity {
+	
+	//Variaveis
+	String palavra; //Guarda a palavra do bd que irá ser sorteada
+	String esconde; //Aqui a palavra é substituida por '-'
+	StringBuilder achou; //Quando digita a letra certa ele subistitui o '-' pela letra
 	
 	private Button buttonQ;
 	private Button buttonW;
@@ -237,14 +243,63 @@ public class JogoActivity extends Activity {
 		});
 		
 		/* ###### FIM DO TRATAMENTO DE EVENTO DOS BOTOES  #####*/
+		
+		
+		/* ###### MOSTRA PALAVRA ESCONDIDA ##### */
+		
+		//Só para testes, depois tem que fazer receber a palavra sorteada do banco
+		palavra="SC INTERNACIONAL";
+		
+		//Recebe palavra para subistituir por '-' depois
+		esconde = palavra;
+		
+		//Esconde a palavra colocando '_' no lugar das letras
+		for(Character i='A'; i <= 'Z'; i++){
+			esconde = esconde.replace(i, '-');
+		}
+
+		//TextView
+		TextView t = (TextView) findViewById(R.id.texto);
+		
+		//Exibe a palavra escondida na tela
+		t.setText(esconde);
+		
+		//achou recebe a palavra escondida
+		achou = new StringBuilder(esconde);
 
 	}
 	
 	public void fazJogada(CharSequence letra){
+		
+		//Pega a letra
+		char l = letra.charAt(0);
+		
+		//Percorre a palavra para ver se tem a letra
+		for(int i=0; i < palavra.length(); i++){
+			
+			//Se siver substitui o '-' pela letra
+			if(palavra.charAt(i)==l){
+				achou.setCharAt(i, l);
+			}
+			
+		}
+		
+		//TextView
 		TextView t = (TextView) findViewById(R.id.texto);
-		t.setText(letra);
+		
+		//Printa na tela
+		t.setText(achou);
+		
+		
 	}
 	
+
+		
+	
+	
+	
+	
+	//Tratamento de evento dos botoes
 	public class Clique implements OnClickListener{
 
 		String letra="";
