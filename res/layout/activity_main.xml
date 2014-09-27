@@ -56,4 +56,13 @@
         android:textColor="@color/text"
         android:width="220dp" />
 
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/novoJogo"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="26dp"
+        android:text="" />
+
 </RelativeLayout>

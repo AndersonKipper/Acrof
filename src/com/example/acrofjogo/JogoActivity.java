@@ -248,14 +248,14 @@ public class JogoActivity extends Activity {
 		/* ###### MOSTRA PALAVRA ESCONDIDA ##### */
 		
 		//Só para testes, depois tem que fazer receber a palavra sorteada do banco
-		palavra="SC INTERNACIONAL";
+		palavra="S C  I N T E R N A C I O N A L";
 		
 		//Recebe palavra para subistituir por '-' depois
 		esconde = palavra;
 		
 		//Esconde a palavra colocando '_' no lugar das letras
 		for(Character i='A'; i <= 'Z'; i++){
-			esconde = esconde.replace(i, '-');
+			esconde = esconde.replace(i, '_');
 		}
 
 		//TextView

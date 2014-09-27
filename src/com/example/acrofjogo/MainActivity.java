@@ -1,5 +1,7 @@
 package com.example.acrofjogo;
 
+import com.example.DAO.PalavraDAO;
+
 import android.app.Activity;
 
 import android.content.Intent;
@@ -8,6 +10,7 @@ import android.support.v4.widget.SearchViewCompat.OnCloseListenerCompat;
 import android.view.*;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
@@ -16,7 +19,12 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		PalavraDAO db = new PalavraDAO(this);
+		
 		setContentView(R.layout.activity_main);
+		
+		//TextView a = (TextView) findViewById(R.id.t1);
+	//	a.setText(""+db.quantRegistro());
 		//startActivity(new Intent(this, NivelActivity.class));
 		//startActivity(new Intent(this, JogoActivity.class));
 		

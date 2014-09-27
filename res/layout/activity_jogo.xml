@@ -276,8 +276,8 @@
         android:layout_height="wrap_content"
         android:layout_x="7dp"
         android:layout_y="179dp"
-        android:text="INTERNACIONAL"
-        android:textSize="25dp"
+        android:text="I N T E R N A C I O N A L"
+        android:textSize="15dp"
         android:typeface="sans"
         android:textScaleX="1.5"/>
 

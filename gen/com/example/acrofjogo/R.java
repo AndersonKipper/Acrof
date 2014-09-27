@@ -40,7 +40,7 @@ public final class R {
         public static final int titulo=0x7f020006;
     }
     public static final class id {
-        public static final int action_settings=0x7f090029;
+        public static final int action_settings=0x7f09002a;
         public static final int buttonA=0x7f090017;
         public static final int buttonB=0x7f090013;
         public static final int buttonC=0x7f090011;
@@ -68,15 +68,16 @@ public final class R {
         public static final int buttonX=0x7f090010;
         public static final int buttonY=0x7f090009;
         public static final int buttonZ=0x7f09000f;
-        public static final int dificil=0x7f090028;
-        public static final int facil=0x7f090026;
+        public static final int dificil=0x7f090029;
+        public static final int facil=0x7f090027;
         public static final int imageView1=0x7f090022;
         public static final int instrucoes=0x7f090024;
-        public static final int medio=0x7f090027;
+        public static final int medio=0x7f090028;
         public static final int nivel=0x7f090002;
         public static final int novoJogo=0x7f090023;
         public static final int paises=0x7f090001;
         public static final int sair=0x7f090025;
+        public static final int t1=0x7f090026;
         public static final int tableRow1=0x7f090003;
         public static final int tableRow2=0x7f090016;
         public static final int tableRow3=0x7f09000e;

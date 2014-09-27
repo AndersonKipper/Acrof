@@ -5,12 +5,13 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class PalavraDAO extends SQLiteOpenHelper {
 
 	private static final int VERSAO = 6;
 	private static final String TABELA = "Palavras";
-	private static final String DATABASE = "Aforc";
+	private static final String DATABASE = "Acrof";
 	public SQLiteDatabase db;
 
 	// constante para log no logcast
@@ -25,17 +26,22 @@ public class PalavraDAO extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase database) {
 
 		String ddl = "CREATE TABLE IF NOT EXISTS " + TABELA + "( " +
-				//"id INTEGER PRIMARY KEY, " +
+				"ID INTEGER PRIMARY KEY autoincrement, " +
 			    "palavra TEXT, " + 
-				"categoria TEXT)";
+			    "nivel TEXT, "+
+				"categoria TEXT);";
 
+		
 		// execucao do comando no dSQLite
 		db.execSQL(ddl);
-		/*
+		
 		if(this.quantRegistro() == 0){
 			
-			//cadastrarPalavras();
-		}*/
+			cadastrarPalavras();
+			
+		}
+		
+		
 	}
 
 	@Override
@@ -49,7 +55,7 @@ public class PalavraDAO extends SQLiteOpenHelper {
 	 //em testes
 	
 	public void cadastrarPalavras(){
-		try {
+		/*try {
 		// Instancia um objeto do tipo File
 				File arquivo = new File("times.txt");
 				
@@ -67,20 +73,20 @@ public class PalavraDAO extends SQLiteOpenHelper {
 					// Leitura do arquivo.
 					// Enquanto esta ready para ler...
 					while (br.ready()) {
-						// Le a proxima linha
-						String linha = br.readLine();
-						db.execSQL("INSERT INTO " + TABELA + "(palavra, categoria) VALUES(" + linha + ", 'TIMES')");
-					}
+						// Le a proxima linha*/
+						String linha = "INTER"; //br.readLine();
+						db.execSQL("INSERT INTO " + TABELA + " (palavra, categoria) VALUES( '" + linha + "', 'TIMES')");
+				//	}
+						Log.i("FOI", "Inserido corretamente");
 					
-					dbClose();
 					// Fecha os recursos (IMPORTANTISSIMO)
-					br.close();
-					fr.close();
+				//	br.close();
+				//	fr.close();
+					dbClose();
 					
-					
-				} catch (IOException e) {
+			/*	} catch (IOException e) {
 					e.printStackTrace();
-				} 
+				} */
 		
 		
 	}
