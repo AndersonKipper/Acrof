@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paisagem_efeito"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btMenuPrincipal"
+        style="@style/BootstrapButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="118dp"
+        android:height="55dp"
+        android:onClick="menuPrincipal"
+        android:text="Menu Principal"
+        android:textColor="@color/text"
+        android:width="260dp" />
+
+    <Button
+        android:id="@+id/btContinuar"
+        style="@style/BootstrapButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btMenuPrincipal"
+        android:layout_centerHorizontal="true"
+        android:height="55dp"
+        android:onClick="continuar"
+        android:text="Continuar"
+        android:textColor="@color/text"
+        android:width="260dp" />
+
+</RelativeLayout>

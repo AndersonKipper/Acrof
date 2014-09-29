@@ -1,6 +1,7 @@
 package com.example.acrofjogo;
 
 import android.app.Activity;
+import android.content.Intent;
 
 import android.os.Bundle;
 import android.support.v4.widget.SearchViewCompat.OnCloseListenerCompat;
@@ -16,6 +17,8 @@ public class JogoActivity extends Activity {
 	//Variaveis
 	String palavra; //Guarda a palavra do bd que irá ser sorteada
 	String esconde; //Aqui a palavra é substituida por '-'
+	int tentativas=0;
+	int venceu=0; //Qundo venceu for igual ao tamanho da palavra é pq ganhou.
 	StringBuilder achou; //Quando digita a letra certa ele subistitui o '-' pela letra
 	
 	private Button buttonQ;
@@ -271,24 +274,48 @@ public class JogoActivity extends Activity {
 	
 	public void fazJogada(CharSequence letra){
 		
+		
 		//Pega a letra
 		char l = letra.charAt(0);
 		
-		//Percorre a palavra para ver se tem a letra
-		for(int i=0; i < palavra.length(); i++){
-			
-			//Se siver substitui o '-' pela letra
-			if(palavra.charAt(i)==l){
-				achou.setCharAt(i, l);
+		if(tentativas < 5){
+			//Percorre a palavra para ver se tem a letra
+			for(int i=0; i < palavra.length(); i++){
+				
+				//Se siver substitui o '-' pela letra
+				if(palavra.charAt(i)==l){
+					achou.setCharAt(i, l);
+					
+					venceu++;
+					
+					//Se acertou diminui para não somar lá embaixo (gambiarra aqui)
+					tentativas--;
+				}
+				else{
+					
+				}
+				
 			}
 			
+			//if para verificar se ganhou
+			if(venceu == palavra.length()){
+				//Chama a tela de continua
+				startActivity(new Intent(this, ContinuarActivity.class));
+			}
+		
+			//TextView
+			TextView t = (TextView) findViewById(R.id.texto);
+			
+			//Printa na tela
+			t.setText(achou);
+			
+			tentativas++;
 		}
-		
-		//TextView
-		TextView t = (TextView) findViewById(R.id.texto);
-		
-		//Printa na tela
-		t.setText(achou);
+		else{
+			//Chama a te de continua
+			startActivity(new Intent(this, ContinuarActivity.class));
+			
+		}
 		
 		
 	}
