@@ -16,6 +16,7 @@ public class JogoActivity extends Activity {
 	
 	//Variaveis
 	String palavra; //Guarda a palavra do bd que irá ser sorteada
+	int espacos=0;
 	String esconde; //Aqui a palavra é substituida por '-'
 	int tentativas=0;
 	int venceu=0; //Qundo venceu for igual ao tamanho da palavra é pq ganhou.
@@ -269,6 +270,15 @@ public class JogoActivity extends Activity {
 		
 		//achou recebe a palavra escondida
 		achou = new StringBuilder(esconde);
+		
+		//Conta os espaços da palavra
+		for(int x=0 ; x < palavra.length(); x++){
+			if(palavra.charAt(x) == ' '){
+				espacos++;
+			}
+		}
+		
+		venceu = venceu + espacos;
 
 	}
 	
@@ -278,23 +288,31 @@ public class JogoActivity extends Activity {
 		//Pega a letra
 		char l = letra.charAt(0);
 		
-		if(tentativas < 5){
+			int y=0;
 			//Percorre a palavra para ver se tem a letra
 			for(int i=0; i < palavra.length(); i++){
 				
+			
 				//Se siver substitui o '-' pela letra
 				if(palavra.charAt(i)==l){
 					achou.setCharAt(i, l);
 					
 					venceu++;
 					
-					//Se acertou diminui para não somar lá embaixo (gambiarra aqui)
-					tentativas--;
-				}
-				else{
-					
+					y++;
+					//Para não diminuir mais de uma vez para a mesma letra, se tiver mais de uma vez a mesma letra na palavra
+					if(y <= 1){
+						//Se acertou diminui para não somar lá embaixo (gambiarra aqui)
+						tentativas--;
+					}
 				}
 				
+			}
+			
+			//Verifica se perdeu
+			if(tentativas >= 5){
+				//Chama a tela de continua
+				startActivity(new Intent(this, ContinuarActivity.class));
 			}
 			
 			//if para verificar se ganhou
@@ -302,6 +320,7 @@ public class JogoActivity extends Activity {
 				//Chama a tela de continua
 				startActivity(new Intent(this, ContinuarActivity.class));
 			}
+			
 		
 			//TextView
 			TextView t = (TextView) findViewById(R.id.texto);
@@ -310,15 +329,10 @@ public class JogoActivity extends Activity {
 			t.setText(achou);
 			
 			tentativas++;
-		}
-		else{
-			//Chama a te de continua
-			startActivity(new Intent(this, ContinuarActivity.class));
-			
-		}
 		
 		
 	}
+
 	
 
 		
