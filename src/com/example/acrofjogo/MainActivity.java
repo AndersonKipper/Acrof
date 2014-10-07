@@ -14,7 +14,8 @@ import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
-	public static String nivel = "NÍVEL > ";
+	public static String nivel="";
+	public static String categoria="";
     private Button novoJogo;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,9 @@ public class MainActivity extends Activity {
 
 	public void novoJogo(View v){
 		startActivity(new Intent(this, NivelActivity.class));
+	}
+	public void Instrucoes(View v){
+		startActivity(new Intent(this, Lista.class));
 	}
 	
 	public void sair(View v){

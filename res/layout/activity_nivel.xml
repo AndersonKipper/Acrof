@@ -28,7 +28,7 @@
         android:height="55dp"
         android:text="Médio"
         android:width="260dp"
-        android:onClick="medio"
+        android:onClick="setMedio"
         style="@style/BootstrapButton"
         android:textColor="@color/text"  />
 
@@ -41,7 +41,7 @@
         android:height="55dp"
         android:text="Difícil"
         android:width="260dp"
-        android:onClick="dificil"
+        android:onClick="setDificil"
         style="@style/BootstrapButton"
         android:textColor="@color/text" />
 

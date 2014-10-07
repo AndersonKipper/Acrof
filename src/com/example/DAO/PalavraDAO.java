@@ -1,18 +1,25 @@
 package com.example.DAO;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Random;
+
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.database.Cursor;
+import android.database.DatabaseErrorHandler;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.Toast;
 
 public class PalavraDAO extends SQLiteOpenHelper {
 
-	private static final int VERSAO = 6;
-	private static final String TABELA = "Palavras";
-	private static final String DATABASE = "Acrof";
-	public SQLiteDatabase db;
+	private static final int VERSAO = 1;
+	private static final String TABELA = "palavras";
+	private static final String DATABASE = "acrof";
+	public static Context c;
 
 	// constante para log no logcast
 	// private static final String TAG = "CADASTRO_ALUNO";
@@ -20,123 +27,140 @@ public class PalavraDAO extends SQLiteOpenHelper {
 	public PalavraDAO(Context context) {
 		super(context, DATABASE, null, VERSAO);
 		// TODO Auto-generated constructor stub
+		c = context;
 	}
 
 	@Override
 	public void onCreate(SQLiteDatabase database) {
 
-		String ddl = "CREATE TABLE IF NOT EXISTS " + TABELA + "( " +
-				"ID INTEGER PRIMARY KEY autoincrement, " +
-			    "palavra TEXT, " + 
-			    "nivel TEXT, "+
-				"categoria TEXT);";
+		String ddl = "CREATE TABLE " + TABELA + "( "
+				+ "id INTEGER PRIMARY KEY autoincrement, " + "palavra TEXT, "
+				+ "nivel TEXT, " + "categoria TEXT);";
 
-		
 		// execucao do comando no dSQLite
-		db.execSQL(ddl);
+		database.execSQL(ddl);
 		
-		if(this.quantRegistro() == 0){
-			
-			cadastrarPalavras();
-			
+		if (quantRegistro(database) == 0) {
+
+			cadastrarPalavras(database);
+
 		}
-		
-		
+
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase database, int versaoAntiga,
 			int versaoNova) {
+		String sql = "DROP TABLE IF EXISTS " + TABELA;
+		database.execSQL(sql);
+		onCreate(database);
+	}
+
+	// em testes
+
+	public void cadastrarPalavras(SQLiteDatabase database) {
+		 try 
+		    {
+		    	
+
+		        // Obtem o contexto definido globalmente e abre o arquivo do Assets
+		        InputStream is = c.getAssets().open("insert.txt");
+		        BufferedReader br = new BufferedReader(new InputStreamReader(is));
+		        String insert = null;
+
+		        // Instancia do stringbuilder que sera utilizada para leitura do arquivo
+		       // sb = new StringBuilder();
+		     
+		        while ((insert = br.readLine()) != null){
+		        	database.execSQL(insert);
+		        	//Toast.makeText(c, "Numero de registros " + insert , Toast.LENGTH_SHORT).show();
+		        }
+		        
+		        br.close();
+		        is.close();
+		      
+
+		    } catch (Exception e1) {AssetManager assetManager;  
+		    
+		        Toast.makeText(c, "Excecao no arquivo " + e1.getMessage() , Toast.LENGTH_LONG).show();
+		    }
+	}
+
+	// varifica se existe registros na tabela
+	public Integer quantRegistro(SQLiteDatabase database) {
+
+		String sql = "SELECT * FROM " + TABELA;
+		
+		Cursor cursor = database.rawQuery(sql, null);
+
+		int i = cursor.getCount();
+		
+		cursor.close();
+		
+		 Toast.makeText(c, "Numero de registros " + i , Toast.LENGTH_LONG).show();
+		return i;
 
 	}
 
-	
-	
-	 //em testes
-	
-	public void cadastrarPalavras(){
-		/*try {
-		// Instancia um objeto do tipo File
-				File arquivo = new File("times.txt");
-				
-				
-					// Construtor de um FileReader (note o tratamento de IOException)
-					// Caso seja feito um append no arquivo, necessario passar o
-					//    valor true apos o identificador do arquivo
-					FileReader fr = new FileReader(arquivo);
-					
-					// Criacao do BufferedReader
-					BufferedReader br = new BufferedReader(fr);
-					
-					dbOpen();
-					
-					// Leitura do arquivo.
-					// Enquanto esta ready para ler...
-					while (br.ready()) {
-						// Le a proxima linha*/
-						String linha = "INTER"; //br.readLine();
-						db.execSQL("INSERT INTO " + TABELA + " (palavra, categoria) VALUES( '" + linha + "', 'TIMES')");
-				//	}
-						Log.i("FOI", "Inserido corretamente");
-					
-					// Fecha os recursos (IMPORTANTISSIMO)
-				//	br.close();
-				//	fr.close();
-					dbClose();
-					
-			/*	} catch (IOException e) {
-					e.printStackTrace();
-				} */
+	public ArrayList<String> getLista() {
+		
+		ArrayList<String> lista = new ArrayList<String>();
+		String sql = "SELECT * FROM " + TABELA;
 		
 		
-	}
-	
-	//varifica se existe registros na tabela
-	public Integer quantRegistro(){
 		
-		dbOpen();	
-		Cursor c = db.rawQuery("SELECT * FROM " + TABELA, null);
+		Cursor cursor = getReadableDatabase().rawQuery(sql, null);
+
 		
-		int i = c.getCount();
-			
-		c.close();
-		dbClose();
-
-	return i;
-	
-	}
-	
-	public String teste() {
 		
-		dbOpen();
-					
-		Cursor c = db.rawQuery("SELECT palavra FROM "+ TABELA +" ORDER BY ID", null);
-
-		String a ="";
-
-		if (c.moveToFirst()) {
-
-			do {
-					
-					a = c.getString(c.getColumnIndex("palavra"));
-					
-					break;
-
-				} while (c.moveToNext());
-
+		
+		try{
+			while(cursor.moveToNext()){
+				String linha = cursor.getString(1);
+				lista.add(linha);
 			}
+		}catch(SQLException e){
+		Toast.makeText(c, "Erro" + e , Toast.LENGTH_LONG).show();
+		}
+		
+		cursor.close();
+		
+		 return lista;
 
-		c.close();
-		dbClose();
-			
-		return a;
-	
 	}
 	
-	// Abre o banco
-		public void dbOpen(){ this.db = this.getWritableDatabase(); }
-							
-		// Fecha o banco
-		public void dbClose(){ this.db.close(); }
+	
+	public String getPalavra(String nivel, String categoria){
+		
+String sql = "SELECT palavra FROM " + TABELA + " WHERE nivel = '" + nivel + "' AND categoria = '" + categoria + "'";
+		
+		
+		
+		Cursor cursor = getReadableDatabase().rawQuery(sql, null);
+
+		int i = 0;
+		
+		int id = new Random().nextInt(cursor.getCount());
+		
+		String palavra = "";
+		try{
+			while(cursor.moveToNext()){
+				
+				if(i == id){
+					palavra = cursor.getString(0);
+					Toast.makeText(c, sql + " --- " + palavra, Toast.LENGTH_LONG).show();
+				}
+				i++;
+			}
+		}catch(SQLException e){
+		Toast.makeText(c, "Erro" + e , Toast.LENGTH_LONG).show();
+		}
+		
+		cursor.close();
+		
+		
+		return palavra;
+	}
+	
 
 }

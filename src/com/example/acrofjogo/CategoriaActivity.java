@@ -28,8 +28,15 @@ public class CategoriaActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		
 		setContentView(R.layout.activity_categoria);
+		
 		status = (TextView) findViewById(R.id.nivel);
 		status.setText(MainActivity.nivel);
+		
+		times = (Button) findViewById(R.id.times);
+		times.setOnClickListener(new Categoria(times.getText().toString()));
+		
+		paises = (Button) findViewById(R.id.paises);
+		paises.setOnClickListener(new Categoria(paises.getText().toString()));
 		
 		
 		
@@ -40,7 +47,26 @@ public class CategoriaActivity extends Activity {
 	//metodo somente para TESTES
 	public void jogo(View v){
 		startActivity(new Intent(this, JogoActivity.class));
+		//finish();
 	}
+	
+	public class Categoria implements OnClickListener{
+
+		String categoria;
+		 public Categoria(String cat) {
+			// TODO Auto-generated constructor stub
+			categoria = cat;
+		}
+
+		@Override
+		public void onClick(View v) {
+			 MainActivity.categoria = categoria;
+				jogo(v);
+			
+			
+		}	
+
+}
 	
 
 	@Override

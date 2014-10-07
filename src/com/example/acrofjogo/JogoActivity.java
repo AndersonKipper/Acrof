@@ -1,5 +1,7 @@
 package com.example.acrofjogo;
 
+import com.example.DAO.PalavraDAO;
+
 import android.app.Activity;
 import android.content.Intent;
 
@@ -250,9 +252,21 @@ public class JogoActivity extends Activity {
 		
 		
 		/* ###### MOSTRA PALAVRA ESCONDIDA ##### */
-		
+		PalavraDAO db = new PalavraDAO(this);
 		//Só para testes, depois tem que fazer receber a palavra sorteada do banco
-		palavra="S C  I N T E R N A C I O N A L";
+		
+		palavra= db.getPalavra(MainActivity.nivel, MainActivity.categoria);
+		
+		//ARRUMAR ESSA GAMBIARRA... --> -->
+	/*	String p = "";
+		for(int i = 0 ; i < palavra.length(); i++){
+			if(i != palavra.length() - 1){
+			 p+= palavra.charAt(i) + " ";
+			}else{
+				p+= palavra.charAt(i);
+			}
+		}*/
+		///<-- <--
 		
 		//Recebe palavra para subistituir por '-' depois
 		esconde = palavra;
@@ -313,12 +327,14 @@ public class JogoActivity extends Activity {
 			if(tentativas >= 5){
 				//Chama a tela de continua
 				startActivity(new Intent(this, ContinuarActivity.class));
+				//finish();
 			}
 			
 			//if para verificar se ganhou
 			if(venceu == palavra.length()){
 				//Chama a tela de continua
 				startActivity(new Intent(this, ContinuarActivity.class));
+				//finish();
 			}
 			
 		

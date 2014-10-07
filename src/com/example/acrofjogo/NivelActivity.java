@@ -6,6 +6,7 @@ import android.app.Activity;
 
 
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -20,11 +21,27 @@ public class NivelActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_nivel);
 		
+		
 	}
 	
 	public void setFacil(View v){
-		MainActivity.nivel += "FACIL";
+		
 		startActivity(new Intent(this, CategoriaActivity.class));
+		MainActivity.nivel = "FACIL";
+		//finish();
+	}
+	
+	public void setMedio(View v){
+		
+		startActivity(new Intent(this, CategoriaActivity.class));
+		MainActivity.nivel = "MEDIO";
+		//finish();
+	}
+	
+	public void setDificil(View v){
+		MainActivity.nivel = "DIFICIL";
+		startActivity(new Intent(this, CategoriaActivity.class));
+		//finish();
 	}
 
 	@Override

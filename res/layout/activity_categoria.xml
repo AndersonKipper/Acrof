@@ -15,8 +15,7 @@
         android:layout_y="164dp"
         android:height="50dp"
         android:text="TIMES"
-        android:width="140dp"
-        android:onClick="jogo" 
+        android:width="140dp" 
         style="@style/BootstrapButton"
         android:textColor="@color/text"/>
      <Button
@@ -28,7 +27,6 @@
         android:height="50dp"
         android:text="PAISES"
         android:width="140dp"
-        android:onClick="jogo"
         style="@style/BootstrapButton"
         android:textColor="@color/text" />
 

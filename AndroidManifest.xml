@@ -29,6 +29,7 @@
         <!-- Tela principal do jogo -->
         <activity android:name="com.example.acrofjogo.JogoActivity" android:screenOrientation="portrait" />
         <activity android:name="com.example.acrofjogo.ContinuarActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.example.acrofjogo.Lista" android:screenOrientation="portrait" />
     </application>
 
 </manifest>

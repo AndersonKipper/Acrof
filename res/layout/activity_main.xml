@@ -41,6 +41,7 @@
         android:height="50dp"
         android:text="Instruções"
         android:textColor="@color/text"
+        android:onClick="Instrucoes"
         android:width="220dp" />
 
     <Button
