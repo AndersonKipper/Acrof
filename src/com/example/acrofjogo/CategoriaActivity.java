@@ -47,7 +47,7 @@ public class CategoriaActivity extends Activity {
 	//metodo somente para TESTES
 	public void jogo(View v){
 		startActivity(new Intent(this, JogoActivity.class));
-		//finish();
+		finish();
 	}
 	
 	public class Categoria implements OnClickListener{

@@ -6,6 +6,9 @@ import com.example.DAO.PalavraDAO;
 import com.example.model.Jogador;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 
 import android.os.Bundle;
@@ -26,7 +29,7 @@ public class JogoActivity extends Activity {
 	int tentativas=0;
 	int venceu=0; //Qundo venceu for igual ao tamanho da palavra é pq ganhou.
 	StringBuilder achou; //Quando digita a letra certa ele subistitui o '-' pela letra
-	
+	Context c;
 	Jogador jg;
 	JogadorDAO daoJg = new JogadorDAO(this);
 	
@@ -70,6 +73,7 @@ public class JogoActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_jogo);
 		
+		c = this;
 		jg = daoJg.getJogador();
 		
 		buttonQ = (Button) findViewById(R.id.buttonQ);
@@ -355,7 +359,7 @@ public class JogoActivity extends Activity {
 				
 				//Chama a tela de continua
 				startActivity(new Intent(this, ContinuarActivity.class));
-				//finish();
+				finish();
 			}
 			
 			//if para verificar se ganhou
@@ -372,7 +376,7 @@ public class JogoActivity extends Activity {
 				
 				//Chama a tela de continua
 				startActivity(new Intent(this, ContinuarActivity.class));
-				//finish();
+				finish();
 			}
 			
 		
@@ -410,6 +414,36 @@ public class JogoActivity extends Activity {
 		
 		
 	}
+	
+	//caso do usuario fechar o jogo
+		public void onBackPressed() {
+		    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(c);
+		    alertDialogBuilder.setIcon(R.drawable.ic_launcher);
+		    alertDialogBuilder.setTitle("Jogo da Forca");
+		 
+		    alertDialogBuilder.setMessage("Desistir da Partida?").setCancelable(false).setPositiveButton("Sim",
+		        new DialogInterface.OnClickListener() {
+		            public void onClick(DialogInterface dialog, int id) {
+		            	jg.setRodadas(jg.getRodadas()+1);
+						
+						//Soma uma derrota
+						jg.setDerrotas(jg.getDerrotas()+1);
+						
+						//Atualiza o banco
+						daoJg.atualizar(jg);
+		            	finish();
+		            }
+		        })
+		        .setNegativeButton("Não",
+		        new DialogInterface.OnClickListener() {
+		            public void onClick(DialogInterface dialog, int id) {
+		                dialog.cancel();
+		            }
+		        });
+		 
+		    AlertDialog alertDialog = alertDialogBuilder.create();
+		    alertDialog.show();
+		}
 	
 
 }

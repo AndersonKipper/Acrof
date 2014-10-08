@@ -28,20 +28,20 @@ public class NivelActivity extends Activity {
 		
 		startActivity(new Intent(this, CategoriaActivity.class));
 		MainActivity.nivel = "FACIL";
-		//finish();
+		finish();
 	}
 	
 	public void setMedio(View v){
 		
 		startActivity(new Intent(this, CategoriaActivity.class));
 		MainActivity.nivel = "MEDIO";
-		//finish();
+		finish();
 	}
 	
 	public void setDificil(View v){
 		MainActivity.nivel = "DIFICIL";
 		startActivity(new Intent(this, CategoriaActivity.class));
-		//finish();
+		finish();
 	}
 
 	@Override
