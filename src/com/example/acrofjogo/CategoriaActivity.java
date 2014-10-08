@@ -87,4 +87,9 @@ public class CategoriaActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	public void onBackPressed() {
+		startActivity(new Intent(this, NivelActivity.class));
+		finish();
+	}
 }

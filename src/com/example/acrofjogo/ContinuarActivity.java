@@ -22,10 +22,11 @@ public class ContinuarActivity extends Activity {
 	
 	public void continuar(View v){
 		startActivity(new Intent(this, JogoActivity.class));
+		finish();
 	}
 	
 	public void menuPrincipal(View v){
-		startActivity(new Intent(this, MainActivity.class));
+		finish();
 	}
 
 
@@ -46,5 +47,9 @@ public class ContinuarActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	public void onBackPressed() {
+		finish();
 	}
 }

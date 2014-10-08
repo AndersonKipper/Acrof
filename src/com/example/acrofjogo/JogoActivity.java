@@ -431,6 +431,7 @@ public class JogoActivity extends Activity {
 						
 						//Atualiza o banco
 						daoJg.atualizar(jg);
+						startActivity(new Intent(c, ContinuarActivity.class));
 		            	finish();
 		            }
 		        })
