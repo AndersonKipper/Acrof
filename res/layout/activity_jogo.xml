@@ -281,4 +281,12 @@
         android:typeface="sans"
         android:textScaleX="1.5"/>
 
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_x="18dp"
+        android:layout_y="240dp"
+        android:text="TextView" />
+
 </AbsoluteLayout>

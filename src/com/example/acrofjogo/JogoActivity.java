@@ -1,6 +1,9 @@
 package com.example.acrofjogo;
 
+
+import com.example.DAO.JogadorDAO;
 import com.example.DAO.PalavraDAO;
+import com.example.model.Jogador;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -23,6 +26,13 @@ public class JogoActivity extends Activity {
 	int tentativas=0;
 	int venceu=0; //Qundo venceu for igual ao tamanho da palavra é pq ganhou.
 	StringBuilder achou; //Quando digita a letra certa ele subistitui o '-' pela letra
+	
+	Jogador jg;
+	JogadorDAO daoJg = new JogadorDAO(this);
+	
+
+	
+	
 	
 	private Button buttonQ;
 	private Button buttonW;
@@ -53,11 +63,14 @@ public class JogoActivity extends Activity {
 	private Button buttonM;
 	
 	private TextView texto; //Só para testes
+	private TextView status;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_jogo);
+		
+		jg = daoJg.getJogador();
 		
 		buttonQ = (Button) findViewById(R.id.buttonQ);
 		buttonW = (Button) findViewById(R.id.buttonW);
@@ -88,6 +101,7 @@ public class JogoActivity extends Activity {
 		buttonM = (Button) findViewById(R.id.buttonM);
 		
 		texto = (TextView) findViewById(R.id.texto); //Apenas pata teste
+		status= (TextView) findViewById(R.id.textStatus);
 		
 		
 		/* ##### INICIO DO TRATAMENTO DE EVENTO DOS BOTOES ##### */
@@ -294,6 +308,10 @@ public class JogoActivity extends Activity {
 		
 		venceu = venceu + espacos;
 
+		
+		
+		status.setText("R: " + jg.getRodadas() + " V: " + jg.getVitorias() + " D: " + jg.getDerrotas());
+
 	}
 	
 	public void fazJogada(CharSequence letra){
@@ -325,6 +343,16 @@ public class JogoActivity extends Activity {
 			
 			//Verifica se perdeu
 			if(tentativas >= 5){
+				
+				//Soma uma rodada
+				jg.setRodadas(jg.getRodadas()+1);
+				
+				//Soma uma derrota
+				jg.setDerrotas(jg.getDerrotas()+1);
+				
+				//Atualiza o banco
+				daoJg.atualizar(jg);
+				
 				//Chama a tela de continua
 				startActivity(new Intent(this, ContinuarActivity.class));
 				//finish();
@@ -332,6 +360,16 @@ public class JogoActivity extends Activity {
 			
 			//if para verificar se ganhou
 			if(venceu == palavra.length()){
+				
+				//Soma uma rodada
+				jg.setRodadas(jg.getRodadas()+1);
+				
+				//Soma uma vitoria
+				jg.setVitorias(jg.getVitorias()+1);
+				
+				//Atualiza o banco
+				daoJg.atualizar(jg);
+				
 				//Chama a tela de continua
 				startActivity(new Intent(this, ContinuarActivity.class));
 				//finish();

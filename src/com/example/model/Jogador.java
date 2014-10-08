@@ -3,6 +3,7 @@ package com.example.model;
 public class Jogador {
 	
 	//Dados do jogador
+	private Integer idJogador;
 	private String nomeJogador;
 	
 	//Estatisticas
@@ -40,6 +41,12 @@ public class Jogador {
 	}
 	public void setAverage(Double average) {
 		this.average = average;
+	}
+	public int getIdJogador(){
+		return idJogador;
+	}
+	public void setIdJogador(Integer id){
+		this.idJogador = id;
 	}
 
 }

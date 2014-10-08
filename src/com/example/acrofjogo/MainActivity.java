@@ -1,5 +1,7 @@
 package com.example.acrofjogo;
 
+
+import com.example.DAO.MontaBanco;
 import com.example.DAO.PalavraDAO;
 
 import android.app.Activity;
@@ -20,6 +22,10 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		//Ao iniciar o sistema cria as tabelas do banco caso ainda não exista.
+		new MontaBanco(this);
+				
 		PalavraDAO db = new PalavraDAO(this);
 		
 		setContentView(R.layout.activity_main);
