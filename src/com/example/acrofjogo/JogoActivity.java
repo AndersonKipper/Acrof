@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.support.v4.widget.SearchViewCompat.OnCloseListenerCompat;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.view.View.OnClickListener;
@@ -32,6 +33,8 @@ public class JogoActivity extends Activity {
 	Context c;
 	Jogador jg;
 	JogadorDAO daoJg = new JogadorDAO(this);
+	ImageView img;
+	int testaTentativa = 0; // testa se tentativa mudou
 	
 
 	
@@ -68,12 +71,15 @@ public class JogoActivity extends Activity {
 	private TextView texto; //Só para testes
 	private TextView status;
 	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_jogo);
+		setContentView(R.layout.activity_partida);
 		
 		c = this;
+		img = (ImageView) findViewById(R.id.imageView1);
+		
 		jg = daoJg.getJogador();
 		
 		buttonQ = (Button) findViewById(R.id.buttonQ);
@@ -275,16 +281,20 @@ public class JogoActivity extends Activity {
 		
 		palavra= db.getPalavra(MainActivity.nivel, MainActivity.categoria);
 		
-		//ARRUMAR ESSA GAMBIARRA... --> -->
-	/*	String p = "";
+		//ARRUMAR ESSA GAMBIARRA... --> -->/*
+	/*
+		String p = "";
 		for(int i = 0 ; i < palavra.length(); i++){
-			if(i != palavra.length() - 1){
+			if(i < palavra.length() - 1){
 			 p+= palavra.charAt(i) + " ";
 			}else{
 				p+= palavra.charAt(i);
 			}
-		}*/
-		///<-- <--
+		}
+		
+		Toast.makeText(c, p, Toast.LENGTH_LONG).show();
+		*/
+		///<-- <--*/
 		
 		//Recebe palavra para subistituir por '-' depois
 		esconde = palavra;
@@ -323,7 +333,7 @@ public class JogoActivity extends Activity {
 		
 		//Pega a letra
 		char l = letra.charAt(0);
-		
+			
 			int y=0;
 			//Percorre a palavra para ver se tem a letra
 			for(int i=0; i < palavra.length(); i++){
@@ -346,7 +356,7 @@ public class JogoActivity extends Activity {
 			}
 			
 			//Verifica se perdeu
-			if(tentativas >= 5){
+			if(tentativas >= 6){
 				
 				//Soma uma rodada
 				jg.setRodadas(jg.getRodadas()+1);
@@ -356,6 +366,9 @@ public class JogoActivity extends Activity {
 				
 				//Atualiza o banco
 				daoJg.atualizar(jg);
+			
+				img.setImageResource(R.drawable.corpo_completo);
+				
 				
 				//Chama a tela de continua
 				startActivity(new Intent(this, ContinuarActivity.class));
@@ -386,13 +399,41 @@ public class JogoActivity extends Activity {
 			//Printa na tela
 			t.setText(achou);
 			
+			int t2 = tentativas;
+			
 			tentativas++;
-		
+			
+			if(testaTentativa != tentativas){
+				mudaTela(tentativas);
+				testaTentativa = tentativas;
+			}
 		
 	}
 
 	
+public void mudaTela(int tela){
+	
+	switch (tela) {
+	case 1: 
+		img.setImageResource(R.drawable.cabeca);
+		break;
+	case 2: 
+		img.setImageResource(R.drawable.corpo);
+		break;
+	case 3: 
+		img.setImageResource(R.drawable.braco_d);
+		break;
+	case 4: 
+		img.setImageResource(R.drawable.braco_e);
+		break;
+	case 5: 
+		img.setImageResource(R.drawable.perna_d);
+		break;
 
+	default:
+		break;
+	}
+}
 		
 	
 	

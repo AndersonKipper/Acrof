@@ -31,13 +31,21 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int button_background_disabled=0x7f020000;
-        public static final int button_background_enabled=0x7f020001;
-        public static final int button_background_pressed=0x7f020002;
-        public static final int button_background_states=0x7f020003;
-        public static final int ic_launcher=0x7f020004;
-        public static final int paisagem_efeito=0x7f020005;
-        public static final int titulo=0x7f020006;
+        public static final int bottom=0x7f020000;
+        public static final int braco_d=0x7f020001;
+        public static final int braco_e=0x7f020002;
+        public static final int button_background_disabled=0x7f020003;
+        public static final int button_background_enabled=0x7f020004;
+        public static final int button_background_pressed=0x7f020005;
+        public static final int button_background_states=0x7f020006;
+        public static final int cabeca=0x7f020007;
+        public static final int corpo=0x7f020008;
+        public static final int corpo_completo=0x7f020009;
+        public static final int ic_launcher=0x7f02000a;
+        public static final int paisagem_efeito=0x7f02000b;
+        public static final int perna_d=0x7f02000c;
+        public static final int titulo=0x7f02000d;
+        public static final int tronco=0x7f02000e;
     }
     public static final class id {
         public static final int action_settings=0x7f09002e;
@@ -94,7 +102,8 @@ public final class R {
         public static final int activity_jogo=0x7f030002;
         public static final int activity_main=0x7f030003;
         public static final int activity_nivel=0x7f030004;
-        public static final int lista=0x7f030005;
+        public static final int activity_partida=0x7f030005;
+        public static final int lista=0x7f030006;
     }
     public static final class menu {
         public static final int main=0x7f080000;

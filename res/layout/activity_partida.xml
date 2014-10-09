@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" >
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="270dp"
+    android:background="@drawable/paisagem_efeito"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/tronco" />
+
+     <TextView
+         android:id="@+id/texto"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="58dp"
+         android:text="I N T E R N A C I O N A L"
+         android:textScaleX="1.5"
+         android:textSize="15dp"
+         android:typeface="sans" />
+
+</RelativeLayout>
+
+<AbsoluteLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_x="3dp"
+    android:layout_y="280dp" >
 
     <TableRow
         android:id="@+id/tableRow1"
@@ -272,24 +304,15 @@
             android:textSize="10dp" />
     </TableRow>
 
-    <TextView
-        android:id="@+id/texto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="7dp"
-        android:layout_y="179dp"
-        android:text="I N T E R N A C I O N A L"
-        android:textSize="15dp"
-        android:typeface="sans"
-        android:textScaleX="1.5"/>
+</AbsoluteLayout>
 
-    <TextView
-        android:id="@+id/textStatus"
-        android:layout_width="260dp"
-        android:layout_height="wrap_content"
-        android:layout_x="18dp"
-        android:layout_y="240dp"
-        android:text="TextView" />
-
+<TextView
+    android:id="@+id/textStatus"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="45dp"
+    android:layout_x="217dp"
+    android:layout_y="207dp"
+    android:text="TextView" />
 
 </AbsoluteLayout>
