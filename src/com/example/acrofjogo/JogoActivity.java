@@ -7,13 +7,16 @@ import com.example.model.Jogador;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 
 import android.os.Bundle;
 import android.support.v4.widget.SearchViewCompat.OnCloseListenerCompat;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -35,8 +38,6 @@ public class JogoActivity extends Activity {
 	JogadorDAO daoJg = new JogadorDAO(this);
 	ImageView img;
 	int testaTentativa = 0; // testa se tentativa mudou
-	
-
 	
 	
 	
@@ -70,6 +71,7 @@ public class JogoActivity extends Activity {
 	
 	private TextView texto; //Só para testes
 	private TextView status;
+	private TextView pala;
 	
 	
 	@Override
@@ -369,10 +371,80 @@ public class JogoActivity extends Activity {
 			
 				img.setImageResource(R.drawable.corpo_completo);
 				
+
+		      ///   setContentView(R.layout.dialog_continua);  
+
+				AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			    // Get the layout inflater
+			    LayoutInflater inflater = this.getLayoutInflater();
+			   
+
+			    // Inflate and set the layout for the dialog
+			    // Pass null as the parent view because its going in the dialog layout
+			    builder.setView(inflater.inflate(R.layout.dialog_perdeu, null)).setCancelable(false)
+			    
+			    // Add action buttons
+			           .setPositiveButton("CONTINUAR JOGANDO", new DialogInterface.OnClickListener() {
+			        	   
+			               @Override
+			               public void onClick(DialogInterface dialog, int id) {
+			            	   Intent myIntent = new Intent(c, JogoActivity.class);
+			            	   startActivity(myIntent);
+			               }
+			           })
+			           .setNegativeButton("SAIR", new DialogInterface.OnClickListener() {
+			               public void onClick(DialogInterface dialog, int id) {
+			            	   finish();
+			               }
+			           });      
+			    
+			  
+			     builder.show();
+
+				
+			/*
+				
+				AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+				AlertDialog.Builder builder = new AlertDialog.Builder(this);
+				
+				LayoutInflater inflater = this.getLayoutInflater();
+				
+				builder.setView(inflater.inflate(R.layout.dialog_continua, null));
+				 
+		        // Setting Dialog Title
+		        builder.setTitle("Você perdeu! :(");
+		 
+		        // Setting Dialog Message
+		        builder.setMessage("A palavra era: \n \n      Anderson Gay \n \n O que deseja fazer agora?");
+		 
+		        // Setting Icon to Dialog
+		        //alertDialog.setIcon(R.drawable.delete);
+		 
+		        // Setting Positive "Yes" Button
+		        builder.setPositiveButton("Jogar novamente", new DialogInterface.OnClickListener() {
+		            public void onClick(DialogInterface dialog,int which) {
+		 
+		            // Write your code here to invoke YES event
+		            Toast.makeText(getApplicationContext(), "You clicked on YES", Toast.LENGTH_SHORT).show();
+		            }
+		        });
+		 
+		        // Setting Negative "NO" Button
+		        builder.setNegativeButton("Sair", new DialogInterface.OnClickListener() {
+		            public void onClick(DialogInterface dialog, int which) {
+		            // Write your code here to invoke NO event
+		            Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
+		            dialog.cancel();
+		            }
+		        });
+		 
+		        // Showing Alert Message
+		        builder.show();
+			*/
 				
 				//Chama a tela de continua
-				startActivity(new Intent(this, ContinuarActivity.class));
-				finish();
+				//startActivity(new Intent(this, ContinuarActivity.class));
+				//finish();
 			}
 			
 			//if para verificar se ganhou
@@ -388,8 +460,33 @@ public class JogoActivity extends Activity {
 				daoJg.atualizar(jg);
 				
 				//Chama a tela de continua
-				startActivity(new Intent(this, ContinuarActivity.class));
-				finish();
+				//startActivity(new Intent(this, ContinuarActivity.class));
+				//finish();
+				
+				AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			    // Get the layout inflater
+			    LayoutInflater inflater = this.getLayoutInflater();
+			   
+
+			    // Inflate and set the layout for the dialog
+			    // Pass null as the parent view because its going in the dialog layout
+			    builder.setView(inflater.inflate(R.layout.dialog_ganhou, null)).setCancelable(false)
+			    // Add action buttons
+			           .setPositiveButton("CONTINUAR JOGANDO", new DialogInterface.OnClickListener() {
+			               @Override
+			               public void onClick(DialogInterface dialog, int id) {
+			            	   Intent myIntent = new Intent(c, JogoActivity.class);
+			            	   startActivity(myIntent);
+			               }
+			           })
+			           .setNegativeButton("SAIR", new DialogInterface.OnClickListener() {
+			               public void onClick(DialogInterface dialog, int id) {
+			            	   finish();
+			               }
+			           });      
+			    
+			     builder.show();
+
 			}
 			
 		
