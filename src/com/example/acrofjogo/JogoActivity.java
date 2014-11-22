@@ -358,7 +358,7 @@ public class JogoActivity extends Activity {
 			}
 			
 			//Verifica se perdeu
-			if(tentativas >= 6){
+			if(tentativas >= 5){
 				
 				//Soma uma rodada
 				jg.setRodadas(jg.getRodadas()+1);
@@ -496,7 +496,7 @@ public class JogoActivity extends Activity {
 			//Printa na tela
 			t.setText(achou);
 			
-			int t2 = tentativas;
+			
 			
 			tentativas++;
 			
