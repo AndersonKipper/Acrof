@@ -148,7 +148,7 @@ String sql = "SELECT palavra FROM " + TABELA + " WHERE nivel = '" + nivel + "' A
 				
 				if(i == id){
 					palavra = cursor.getString(0);
-					Toast.makeText(c, sql + " --- " + palavra, Toast.LENGTH_LONG).show();
+				//	Toast.makeText(c, sql + " --- " + palavra, Toast.LENGTH_LONG).show();
 				}
 				i++;
 			}

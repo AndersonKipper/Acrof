@@ -38,7 +38,7 @@ public class JogoActivity extends Activity {
 	JogadorDAO daoJg = new JogadorDAO(this);
 	ImageView img;
 	int testaTentativa = 0; // testa se tentativa mudou
-	
+	int tamPalavra = 0;
 	
 	
 	private Button buttonQ;
@@ -115,9 +115,10 @@ public class JogoActivity extends Activity {
 		texto = (TextView) findViewById(R.id.texto); //Apenas pata teste
 		status= (TextView) findViewById(R.id.textStatus);
 		
-		
+	        
 		/* ##### INICIO DO TRATAMENTO DE EVENTO DOS BOTOES ##### */
 		
+        
 		//outra forma
 		buttonQ.setOnClickListener(new Clique(buttonQ.getText().toString()));
 		
@@ -279,48 +280,49 @@ public class JogoActivity extends Activity {
 		
 		/* ###### MOSTRA PALAVRA ESCONDIDA ##### */
 		PalavraDAO db = new PalavraDAO(this);
-		//Só para testes, depois tem que fazer receber a palavra sorteada do banco
+		
 		
 		palavra= db.getPalavra(MainActivity.nivel, MainActivity.categoria);
 		
-		//ARRUMAR ESSA GAMBIARRA... --> -->/*
-	/*
-		String p = "";
-		for(int i = 0 ; i < palavra.length(); i++){
-			if(i < palavra.length() - 1){
-			 p+= palavra.charAt(i) + " ";
-			}else{
-				p+= palavra.charAt(i);
-			}
+
+		//explicar o q acontece aqui, tamPalavra recebe o tamanho da palavra gerada, contasse os espaços cria um 'nova' string que recebe palavra com espaços e depois palavra recebe 'nova',
+		//esconde recebe palavra e trca por _ e lanca na textview.
+		
+		tamPalavra = palavra.length();
+		//Conta os espaços da palavra
+				for(int x=0 ; x < palavra.length(); x++){
+					if(palavra.charAt(x) == ' '){
+						espacos++;
+					}
+				}
+		
+		//Esconde a palavra colocando '_' no lugar das letras
+		
+		
+		
+		String nova="";
+		for(int i = 0; i < palavra.length(); i++ ){
+			nova += palavra.charAt(i) + " ";
 		}
 		
-		Toast.makeText(c, p, Toast.LENGTH_LONG).show();
-		*/
-		///<-- <--*/
+		palavra = nova;
 		
 		//Recebe palavra para subistituir por '-' depois
 		esconde = palavra;
-		
-		//Esconde a palavra colocando '_' no lugar das letras
+		//TextView
+		TextView t = (TextView) findViewById(R.id.texto);
 		for(Character i='A'; i <= 'Z'; i++){
 			esconde = esconde.replace(i, '_');
 		}
-
-		//TextView
-		TextView t = (TextView) findViewById(R.id.texto);
-		
 		//Exibe a palavra escondida na tela
 		t.setText(esconde);
 		
 		//achou recebe a palavra escondida
 		achou = new StringBuilder(esconde);
 		
-		//Conta os espaços da palavra
-		for(int x=0 ; x < palavra.length(); x++){
-			if(palavra.charAt(x) == ' '){
-				espacos++;
-			}
-		}
+		
+		
+		
 		
 		venceu = venceu + espacos;
 
@@ -332,7 +334,8 @@ public class JogoActivity extends Activity {
 	
 	public void fazJogada(CharSequence letra){
 		
-		
+			
+	
 		//Pega a letra
 		char l = letra.charAt(0);
 			
@@ -448,7 +451,7 @@ public class JogoActivity extends Activity {
 			}
 			
 			//if para verificar se ganhou
-			if(venceu == palavra.length()){
+			if(venceu == tamPalavra){
 				
 				//Soma uma rodada
 				jg.setRodadas(jg.getRodadas()+1);
