@@ -393,6 +393,7 @@ public class JogoActivity extends Activity {
 			               public void onClick(DialogInterface dialog, int id) {
 			            	   Intent myIntent = new Intent(c, JogoActivity.class);
 			            	   startActivity(myIntent);
+			            	   finish();
 			               }
 			           })
 			           .setNegativeButton("SAIR", new DialogInterface.OnClickListener() {
@@ -480,6 +481,7 @@ public class JogoActivity extends Activity {
 			               public void onClick(DialogInterface dialog, int id) {
 			            	   Intent myIntent = new Intent(c, JogoActivity.class);
 			            	   startActivity(myIntent);
+			            	   finish();
 			               }
 			           })
 			           .setNegativeButton("SAIR", new DialogInterface.OnClickListener() {
