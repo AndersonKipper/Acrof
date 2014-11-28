@@ -11,6 +11,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 
 import android.os.Bundle;
 import android.support.v4.widget.SearchViewCompat.OnCloseListenerCompat;
@@ -116,166 +117,64 @@ public class JogoActivity extends Activity {
 		status= (TextView) findViewById(R.id.textStatus);
 		
 	        
-		/* ##### INICIO DO TRATAMENTO DE EVENTO DOS BOTOES ##### */
+		/* ##### INICIO DO TRATAMENTO DOS BOTOES ##### */
 		
         
-		//outra forma
-		buttonQ.setOnClickListener(new Clique(buttonQ.getText().toString()));
+		buttonQ.setOnClickListener(new Clique(buttonQ.getText().toString(), buttonQ));
 		
-		buttonW.setOnClickListener(new Clique(buttonW.getText().toString()));
+		buttonW.setOnClickListener(new Clique(buttonW.getText().toString(), buttonW));
 		
-		buttonE.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonE.getText());
-			}
-		});
-		buttonR.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonR.getText());
-			}
-		});
-		buttonT.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonT.getText());
-			}
-		});
-		buttonY.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonY.getText());
-			}
-		});
-		buttonU.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonU.getText());
-			}
-		});
-		buttonI.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonI.getText());
-			}
-		});
-		buttonO.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonO.getText());
-			}
-		});
-		buttonP.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonP.getText());
-			}
-		});
-		buttonA.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonA.getText());
-			}
-		});
-		buttonS.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonS.getText());
-			}
-		});
-		buttonD.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonD.getText());
-			}
-		});
-		buttonF.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonF.getText());
-			}
-		});
-		buttonG.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonG.getText());
-			}
-		});
-		buttonH.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonH.getText());
-			}
-		});
-		buttonJ.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonJ.getText());
-			}
-		});
-		buttonK.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonK.getText());
-			}
-		});
-		buttonL.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonL.getText());
-			}
-		});
-		buttonCC.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonCC.getText());
-			}
-		});
-		buttonZ.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonZ.getText());
-			}
-		});
-		buttonX.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonX.getText());
-			}
-		});
-		buttonC.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonC.getText());
-			}
-		});
-		buttonV.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonV.getText());
-			}
-		});
-		buttonB.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonB.getText());
-			}
-		});
-		buttonN.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonN.getText());
-			}
-		});
-		buttonM.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View view) {
-				fazJogada(buttonM.getText());
-			}
-		});
+		buttonE.setOnClickListener(new Clique(buttonE.getText().toString(), buttonE));
 		
-		/* ###### FIM DO TRATAMENTO DE EVENTO DOS BOTOES  #####*/
+		buttonR.setOnClickListener(new Clique(buttonR.getText().toString(), buttonR));
+		
+		buttonT.setOnClickListener(new Clique(buttonT.getText().toString(), buttonT));
+		
+		buttonY.setOnClickListener(new Clique(buttonY.getText().toString(), buttonY));
+		
+		buttonU.setOnClickListener(new Clique(buttonU.getText().toString(), buttonU));
+
+		buttonI.setOnClickListener(new Clique(buttonI.getText().toString(), buttonI));
+
+		buttonO.setOnClickListener(new Clique(buttonO.getText().toString(), buttonO));
+
+		buttonP.setOnClickListener(new Clique(buttonP.getText().toString(), buttonP));
+
+		buttonA.setOnClickListener(new Clique(buttonA.getText().toString(), buttonA));
+
+		buttonS.setOnClickListener(new Clique(buttonS.getText().toString(), buttonS));
+		
+		buttonD.setOnClickListener(new Clique(buttonD.getText().toString(), buttonD));
+
+		buttonF.setOnClickListener(new Clique(buttonF.getText().toString(), buttonF));
+
+		buttonG.setOnClickListener(new Clique(buttonG.getText().toString(), buttonG));
+		
+		buttonH.setOnClickListener(new Clique(buttonH.getText().toString(), buttonH));
+		
+		buttonJ.setOnClickListener(new Clique(buttonJ.getText().toString(), buttonJ));
+		
+		buttonK.setOnClickListener(new Clique(buttonK.getText().toString(), buttonK));
+		
+		buttonL.setOnClickListener(new Clique(buttonL.getText().toString(), buttonL));
+		
+		buttonCC.setOnClickListener(new Clique(buttonCC.getText().toString(), buttonCC));
+		
+		buttonZ.setOnClickListener(new Clique(buttonZ.getText().toString(), buttonZ));
+		
+		buttonX.setOnClickListener(new Clique(buttonX.getText().toString(), buttonX));
+
+		buttonC.setOnClickListener(new Clique(buttonC.getText().toString(), buttonC));
+		
+		buttonV.setOnClickListener(new Clique(buttonV.getText().toString(), buttonV));
+
+		buttonB.setOnClickListener(new Clique(buttonB.getText().toString(), buttonB));
+
+		buttonN.setOnClickListener(new Clique(buttonN.getText().toString(), buttonN));
+
+		buttonM.setOnClickListener(new Clique(buttonM.getText().toString(), buttonM));
+		
+		/* ###### FIM DO TRATAMENTO DOS BOTOES  #####*/
 		
 		
 		/* ###### MOSTRA PALAVRA ESCONDIDA ##### */
@@ -332,7 +231,7 @@ public class JogoActivity extends Activity {
 
 	}
 	
-	public void fazJogada(CharSequence letra){
+	public void fazJogada(CharSequence letra, Button b){
 		
 			
 	
@@ -343,19 +242,25 @@ public class JogoActivity extends Activity {
 			//Percorre a palavra para ver se tem a letra
 			for(int i=0; i < palavra.length(); i++){
 				
-			
+				int acertou=0;
 				//Se siver substitui o '-' pela letra
 				if(palavra.charAt(i)==l){
 					achou.setCharAt(i, l);
-					
+					b.setBackgroundColor(Color.GREEN);
+					b.setEnabled(false); 
 					venceu++;
 					
 					y++;
+					acertou++;
 					//Para não diminuir mais de uma vez para a mesma letra, se tiver mais de uma vez a mesma letra na palavra
 					if(y <= 1){
 						//Se acertou diminui para não somar lá embaixo (gambiarra aqui)
 						tentativas--;
 					}
+				}
+				if(y == 0){
+					b.setBackgroundColor(Color.RED);
+					b.setEnabled(false); 
 				}
 				
 			}
@@ -511,6 +416,10 @@ public class JogoActivity extends Activity {
 			}
 		
 	}
+	//Só teste
+	public void TestaJogada(Button b){
+		b.setBackgroundColor(Color.MAGENTA);
+	}
 
 	
 public void mudaTela(int tela){
@@ -545,14 +454,17 @@ public void mudaTela(int tela){
 	public class Clique implements OnClickListener{
 
 		String letra="";
-		public Clique(String letra) {
+		Button b;
+		
+		public Clique(String letra, Button b) {
 			this.letra = letra;
+			this.b = b;
 			
 		}
 
 		@Override
 		public void onClick(View v) {
-			fazJogada(letra);
+			fazJogada(letra,b);
 		}
 		
 		

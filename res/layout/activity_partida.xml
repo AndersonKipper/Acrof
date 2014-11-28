@@ -57,7 +57,7 @@
 <AbsoluteLayout
     android:layout_width="match_parent"
     android:layout_height="126dp"
-    android:layout_x="3dp"
+    android:layout_x="1dp"
     android:layout_y="280dp" >
 
     <TableRow
@@ -67,16 +67,16 @@
         android:layout_x="2dp"
         android:layout_y="2dp" >
 
-        <Button
+     <Button
             android:id="@+id/buttonQ"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="5dp"
+            android:width="31dp"
             android:text="Q"
-            android:textSize="15dp"
+            android:textSize="12dp"
             />
 
         <Button
@@ -85,10 +85,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="33dp"
             android:text="W"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonE"
@@ -96,10 +96,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="E"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonR"
@@ -107,10 +107,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="R"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonT"
@@ -118,10 +118,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="T"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonY"
@@ -129,10 +129,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="Y"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonU"
@@ -140,10 +140,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="U"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonI"
@@ -151,10 +151,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="I"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonO"
@@ -162,10 +162,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="O"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonP"
@@ -173,17 +173,17 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="P"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="2dp"
+        android:layout_x="3dp"
         android:layout_y="55dp" >
 
         <Button
@@ -192,10 +192,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="A"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonS"
@@ -203,10 +203,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="S"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonD"
@@ -214,10 +214,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="D"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonF"
@@ -225,10 +225,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="F"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonG"
@@ -236,10 +236,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="G"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonH"
@@ -247,10 +247,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="H"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonJ"
@@ -258,10 +258,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="J"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonK"
@@ -269,10 +269,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="K"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonL"
@@ -280,10 +280,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="L"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonCC"
@@ -291,10 +291,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="35dp"
-            android:width="35dp"
+            android:minWidth="11dp"
+            android:width="31dp"
             android:text="Ç"
-            android:textSize="15dp" />
+            android:textSize="12dp" />
     </TableRow>
 
 </AbsoluteLayout>
@@ -312,7 +312,7 @@
     android:id="@+id/tableRow3"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_x="57dp"
+    android:layout_x="46dp"
     android:layout_y="387dp" >
 
     <Button
@@ -321,10 +321,10 @@
         android:layout_height="wrap_content"
         android:height="45dp"
         android:minHeight="45dp"
-        android:minWidth="35dp"
+        android:minWidth="11dp"
         android:text="Z"
-        android:textSize="15dp"
-        android:width="35dp" />
+        android:textSize="12dp"
+        android:width="33dp" />
 
     <Button
         android:id="@+id/buttonX"
@@ -332,10 +332,10 @@
         android:layout_height="wrap_content"
         android:height="45dp"
         android:minHeight="45dp"
-        android:minWidth="35dp"
+        android:minWidth="11dp"
         android:text="X"
-        android:textSize="15dp"
-        android:width="35dp" />
+        android:textSize="12dp"
+        android:width="33dp" />
 
     <Button
         android:id="@+id/buttonC"
@@ -343,10 +343,10 @@
         android:layout_height="wrap_content"
         android:height="45dp"
         android:minHeight="45dp"
-        android:minWidth="35dp"
+        android:minWidth="11dp"
         android:text="C"
-        android:textSize="15dp"
-        android:width="35dp" />
+        android:textSize="12dp"
+        android:width="33dp" />
 
     <Button
         android:id="@+id/buttonV"
@@ -354,9 +354,10 @@
         android:layout_height="wrap_content"
         android:height="45dp"
         android:minHeight="45dp"
-        android:minWidth="35dp"
+        android:minWidth="11dp"
+        android:width="33dp"
         android:text="V"
-        android:textSize="15dp" />
+        android:textSize="12dp" />
 
     <Button
         android:id="@+id/buttonB"
@@ -364,10 +365,10 @@
         android:layout_height="wrap_content"
         android:height="45dp"
         android:minHeight="45dp"
-        android:minWidth="35dp"
+        android:minWidth="11dp"
         android:text="B"
-        android:textSize="15dp"
-        android:width="35dp" />
+        android:textSize="12dp"
+        android:width="33dp" />
 
     <Button
         android:id="@+id/buttonN"
@@ -375,10 +376,10 @@
         android:layout_height="wrap_content"
         android:height="45dp"
         android:minHeight="45dp"
-        android:minWidth="35dp"
+        android:minWidth="11dp"
         android:text="N"
-        android:textSize="15dp"
-        android:width="35dp" />
+        android:textSize="12dp"
+        android:width="33dp" />
 
     <Button
         android:id="@+id/buttonM"
@@ -386,10 +387,10 @@
         android:layout_height="wrap_content"
         android:height="45dp"
         android:minHeight="45dp"
-        android:minWidth="35dp"
+        android:minWidth="11dp"
         android:text="M"
-        android:textSize="15dp"
-        android:width="35dp" />
+        android:textSize="12dp"
+        android:width="33dp" />
 </TableRow>
 
 </AbsoluteLayout>
