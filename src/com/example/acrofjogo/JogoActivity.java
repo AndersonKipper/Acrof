@@ -233,7 +233,6 @@ public class JogoActivity extends Activity {
 	public void fazJogada(CharSequence letra, Button b){
 		
 			
-	
 		//Pega a letra
 		char l = letra.charAt(0);
 			
@@ -245,7 +244,7 @@ public class JogoActivity extends Activity {
 				//Se siver substitui o '-' pela letra
 				if(palavra.charAt(i)==l){
 					achou.setCharAt(i, l);
-					b.setBackgroundColor(Color.GREEN);
+					b.setBackgroundResource(R.drawable.button_background_pressed);
 					b.setMinWidth(25);
 					b.setEnabled(false); 
 					venceu++;
@@ -259,7 +258,7 @@ public class JogoActivity extends Activity {
 					}
 				}
 				if(y == 0){
-					b.setBackgroundColor(Color.RED);
+					b.setBackgroundResource(R.drawable.button_background_wrong);
 					b.setMinWidth(25);
 					b.setEnabled(false); 
 				}

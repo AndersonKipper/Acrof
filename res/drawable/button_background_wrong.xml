@@ -3,9 +3,9 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <gradient
-            android:angle="270"
-            android:endColor="@color/button_background_pressed_end"
-            android:startColor="#0b73b5" />
+        android:angle="270"
+        android:endColor="#dc481a"
+        android:startColor="#9e2804" />
 
     <corners android:radius="09dp" />
 

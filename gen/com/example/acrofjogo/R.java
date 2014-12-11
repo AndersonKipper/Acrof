@@ -39,17 +39,18 @@ public final class R {
         public static final int button_background_enabled=0x7f020005;
         public static final int button_background_pressed=0x7f020006;
         public static final int button_background_states=0x7f020007;
-        public static final int button_bg_normal=0x7f020008;
-        public static final int button_bg_pressed=0x7f020009;
-        public static final int cabeca=0x7f02000a;
-        public static final int caixa_letra=0x7f02000b;
-        public static final int corpo=0x7f02000c;
-        public static final int corpo_completo=0x7f02000d;
-        public static final int ic_launcher=0x7f02000e;
-        public static final int paisagem_efeito=0x7f02000f;
-        public static final int perna_d=0x7f020010;
-        public static final int titulo=0x7f020011;
-        public static final int tronco=0x7f020012;
+        public static final int button_background_wrong=0x7f020008;
+        public static final int button_bg_normal=0x7f020009;
+        public static final int button_bg_pressed=0x7f02000a;
+        public static final int cabeca=0x7f02000b;
+        public static final int caixa_letra=0x7f02000c;
+        public static final int corpo=0x7f02000d;
+        public static final int corpo_completo=0x7f02000e;
+        public static final int ic_launcher=0x7f02000f;
+        public static final int paisagem_efeito=0x7f020010;
+        public static final int perna_d=0x7f020011;
+        public static final int titulo=0x7f020012;
+        public static final int tronco=0x7f020013;
     }
     public static final class id {
         public static final int action_settings=0x7f090034;
