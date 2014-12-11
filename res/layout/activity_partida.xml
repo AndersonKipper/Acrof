@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#CFCFCF"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="270dp"
+    android:layout_height="300dp"
     android:background="@drawable/paisagem_efeito"
     android:orientation="vertical" >
       
@@ -15,6 +16,7 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:src="@drawable/tronco" />
@@ -53,9 +55,8 @@
          android:id="@+id/textStatus"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_alignParentBottom="true"
-         android:layout_alignRight="@+id/texto"
-         android:layout_marginBottom="48dp"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
          android:text="TextView" />
 
  </RelativeLayout>
@@ -67,16 +68,15 @@
         android:gravity="center" >
 
      	<Button
-            android:id="@+id/buttonQ"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:height="45dp"
-            android:minHeight="45dp"
-            android:minWidth="5dp"
-            android:width="31dp"
-            android:text="Q"
-            android:textSize="12dp"
-            />
+     	    android:id="@+id/buttonQ"
+     	    android:layout_width="wrap_content"
+     	    android:layout_height="wrap_content"
+     	    android:height="45dp"
+     	    android:minHeight="45dp"
+     	    android:minWidth="31dp"
+     	    android:maxWidth="40dp"
+     	    android:text="Q"
+     	    android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonW"
@@ -378,6 +378,5 @@
         android:textSize="12dp"
         android:width="33dp" />
 </TableRow>
-
 
 </LinearLayout>

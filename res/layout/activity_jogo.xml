@@ -7,7 +7,7 @@
 
     <TableRow
         android:id="@+id/tableRow1"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center" >
 
@@ -17,8 +17,10 @@
             android:layout_height="wrap_content"
             android:height="45dp"
             android:minHeight="45dp"
-            android:minWidth="5dp"
-            android:width="31dp"
+ 
+            android:minWidth="30dp"
+            
+            android:maxWidth="50dp"
             android:text="Q"
             android:textSize="12dp"
             />

@@ -224,10 +224,9 @@ public class JogoActivity extends Activity {
 		
 		
 		venceu = venceu + espacos;
-
 		
-		
-		status.setText("R: " + jg.getRodadas() + " V: " + jg.getVitorias() + " D: " + jg.getDerrotas());
+		//Exibe na tela os resultados
+		status.setText("Rodadas: " + jg.getRodadas() + " -" + " Vitórias: " + jg.getVitorias() + " -" + " Derrotas: " + jg.getDerrotas()  + "\n" +"Percentual: " + jg.getAverage() + "%");
 
 	}
 	
@@ -247,6 +246,7 @@ public class JogoActivity extends Activity {
 				if(palavra.charAt(i)==l){
 					achou.setCharAt(i, l);
 					b.setBackgroundColor(Color.GREEN);
+					b.setMinWidth(25);
 					b.setEnabled(false); 
 					venceu++;
 					
@@ -260,6 +260,7 @@ public class JogoActivity extends Activity {
 				}
 				if(y == 0){
 					b.setBackgroundColor(Color.RED);
+					b.setMinWidth(25);
 					b.setEnabled(false); 
 				}
 				
@@ -273,6 +274,9 @@ public class JogoActivity extends Activity {
 				
 				//Soma uma derrota
 				jg.setDerrotas(jg.getDerrotas()+1);
+				
+				//Calcula o percentual de vitórias
+				jg.setAverage (((double)jg.getVitorias() / (double)jg.getRodadas()) * 100.0);
 				
 				//Atualiza o banco
 				daoJg.atualizar(jg);
@@ -364,6 +368,9 @@ public class JogoActivity extends Activity {
 				
 				//Soma uma vitoria
 				jg.setVitorias(jg.getVitorias()+1);
+				
+				//Calcula o percentual de vitórias
+				jg.setAverage (((double)jg.getVitorias() / (double)jg.getRodadas()) * 100.0);
 				
 				//Atualiza o banco
 				daoJg.atualizar(jg);
