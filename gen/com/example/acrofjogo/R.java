@@ -39,18 +39,19 @@ public final class R {
         public static final int button_background_enabled=0x7f020005;
         public static final int button_background_pressed=0x7f020006;
         public static final int button_background_states=0x7f020007;
-        public static final int button_background_wrong=0x7f020008;
-        public static final int button_bg_normal=0x7f020009;
-        public static final int button_bg_pressed=0x7f02000a;
-        public static final int cabeca=0x7f02000b;
-        public static final int caixa_letra=0x7f02000c;
-        public static final int corpo=0x7f02000d;
-        public static final int corpo_completo=0x7f02000e;
-        public static final int ic_launcher=0x7f02000f;
-        public static final int paisagem_efeito=0x7f020010;
-        public static final int perna_d=0x7f020011;
-        public static final int titulo=0x7f020012;
-        public static final int tronco=0x7f020013;
+        public static final int button_background_tecla=0x7f020008;
+        public static final int button_background_wrong=0x7f020009;
+        public static final int button_bg_normal=0x7f02000a;
+        public static final int button_bg_pressed=0x7f02000b;
+        public static final int cabeca=0x7f02000c;
+        public static final int caixa_letra=0x7f02000d;
+        public static final int corpo=0x7f02000e;
+        public static final int corpo_completo=0x7f02000f;
+        public static final int ic_launcher=0x7f020010;
+        public static final int paisagem_efeito=0x7f020011;
+        public static final int perna_d=0x7f020012;
+        public static final int titulo=0x7f020013;
+        public static final int tronco=0x7f020014;
     }
     public static final class id {
         public static final int action_settings=0x7f090034;
@@ -122,9 +123,16 @@ public final class R {
         public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f060002;
+        public static final int action_settings=0x7f060009;
         public static final int app_name=0x7f060000;
-        public static final int hello_world=0x7f060001;
+        public static final int dificil=0x7f060006;
+        public static final int facil=0x7f060004;
+        public static final int instrucoes=0x7f060002;
+        public static final int medio=0x7f060005;
+        public static final int novo_jogo=0x7f060001;
+        public static final int paises=0x7f060008;
+        public static final int sair=0x7f060003;
+        public static final int times=0x7f060007;
     }
     public static final class style {
         /** 

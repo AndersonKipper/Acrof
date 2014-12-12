@@ -15,7 +15,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,11 +28,12 @@
         <activity
             android:name="com.example.acrofjogo.CategoriaActivity" android:screenOrientation="portrait" />
         <!-- Tela principal do jogo -->
-        <activity android:name="com.example.acrofjogo.JogoActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.example.acrofjogo.JogoActivity" android:screenOrientation="portrait"/>
         <activity android:name="com.example.acrofjogo.ContinuarActivity" android:screenOrientation="portrait" />
 	
         <!-- Tela principal do jogo -->
-<activity android:name="com.example.acrofjogo.PartidaActivity" android:screenOrientation="portrait" />
+<activity android:name="com.example.acrofjogo.PartidaActivity" android:screenOrientation="portrait"  />
+    
     </application>
 
 </manifest>

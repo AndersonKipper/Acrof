@@ -26,7 +26,7 @@
         android:layout_centerInParent="true"
         android:height="50dp"
         android:onClick="novoJogo"
-        android:text="Novo Jogo"
+        android:text="@string/novo_jogo"
         android:textColor="@color/text"
         android:width="220dp" />
 
@@ -39,7 +39,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center_vertical|center_horizontal|center"
         android:height="50dp"
-        android:text="Instruções"
+        android:text="@string/instrucoes"
         android:textColor="@color/text"
         android:onClick="Instrucoes"
         android:width="220dp" />
@@ -53,7 +53,7 @@
         android:layout_centerHorizontal="true"
         android:height="50dp"
         android:onClick="sair"
-        android:text="Sair"
+        android:text="@string/sair"
         android:textColor="@color/text"
         android:width="220dp" />
 

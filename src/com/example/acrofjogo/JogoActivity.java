@@ -245,7 +245,7 @@ public class JogoActivity extends Activity {
 				if(palavra.charAt(i)==l){
 					achou.setCharAt(i, l);
 					b.setBackgroundResource(R.drawable.button_background_pressed);
-					b.setMinWidth(25);
+					//b.setMinWidth(25);
 					b.setEnabled(false); 
 					venceu++;
 					
@@ -259,7 +259,7 @@ public class JogoActivity extends Activity {
 				}
 				if(y == 0){
 					b.setBackgroundResource(R.drawable.button_background_wrong);
-					b.setMinWidth(25);
+					//b.setMinWidth(25);
 					b.setEnabled(false); 
 				}
 				
@@ -284,7 +284,11 @@ public class JogoActivity extends Activity {
 				
 
 		      ///   setContentView(R.layout.dialog_continua);  
-
+				TextView errou = (TextView) findViewById(R.id.texto);
+				achou = new StringBuilder(palavra);
+				errou.setTextColor(Color.RED);
+				//Printa na tela
+				
 				AlertDialog.Builder builder = new AlertDialog.Builder(this);
 			    // Get the layout inflater
 			    LayoutInflater inflater = this.getLayoutInflater();
@@ -312,7 +316,6 @@ public class JogoActivity extends Activity {
 			    
 			  
 			     builder.show();
-
 				
 			/*
 				

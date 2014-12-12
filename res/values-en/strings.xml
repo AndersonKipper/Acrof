@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">Hangman Game</string>
+    <string name="novo_jogo">New Game</string>
+    <string name="instrucoes">Instructions</string>
+    <string name="sair">Close</string>
+      
+    <string name="facil">Easy</string>
+    <string name="medio">Medium</string>
+    <string name="dificil">Hard</string>
+    
+    <string name="times">Soccer Teams</string>
+    <string name="paises">Countries</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

@@ -14,7 +14,7 @@
         android:layout_x="11dp"
         android:layout_y="164dp"
         android:height="50dp"
-        android:text="TIMES"
+        android:text="@string/times"
         android:width="140dp" 
         style="@style/BootstrapButton"
         android:textColor="@color/text"/>
@@ -25,7 +25,7 @@
         android:layout_x="167dp"
         android:layout_y="164dp"
         android:height="50dp"
-        android:text="PAISES"
+        android:text="@string/paises"
         android:width="140dp"
         style="@style/BootstrapButton"
         android:textColor="@color/text" />

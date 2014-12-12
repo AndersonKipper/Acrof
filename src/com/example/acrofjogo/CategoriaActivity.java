@@ -33,10 +33,10 @@ public class CategoriaActivity extends Activity {
 		status.setText(MainActivity.nivel);
 		
 		times = (Button) findViewById(R.id.times);
-		times.setOnClickListener(new Categoria(times.getText().toString()));
+		times.setOnClickListener(new Categoria("TIMES"));
 		
 		paises = (Button) findViewById(R.id.paises);
-		paises.setOnClickListener(new Categoria(paises.getText().toString()));
+		paises.setOnClickListener(new Categoria("PAISES"));
 		
 		
 		

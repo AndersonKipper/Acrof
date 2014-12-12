@@ -2,9 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-   
-    android:orientation="vertical" 
-    android:background="#646464">
+    android:background="#041c2f"
+    android:orientation="vertical" >
 
 <RelativeLayout
     android:layout_width="match_parent"
@@ -72,6 +71,7 @@
      	    style="@drawable/button_background_pressed"
      	    android:layout_width="wrap_content"
      	    android:layout_height="wrap_content"
+     	    android:background="@drawable/button_background_tecla"
      	    android:height="45dp"
      	    android:maxWidth="40dp"
      	    android:minHeight="45dp"
@@ -83,23 +83,25 @@
             android:id="@+id/buttonW"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_background_tecla"
             android:height="45dp"
             android:minHeight="45dp"
             android:minWidth="11dp"
-            android:width="33dp"
             android:text="W"
-            android:textSize="12dp" />
+            android:textSize="12dp"
+            android:width="33dp" />
 
         <Button
             android:id="@+id/buttonE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_background_tecla"
             android:height="45dp"
             android:minHeight="45dp"
             android:minWidth="11dp"
-            android:width="31dp"
             android:text="E"
-            android:textSize="12dp" />
+            android:textSize="12dp"
+            android:width="31dp" />
 
         <Button
             android:id="@+id/buttonR"
@@ -110,7 +112,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="R"
-            android:textSize="12dp" />
+            android:textSize="12dp" 
+             android:background="@drawable/button_background_tecla"/>
 
         <Button
             android:id="@+id/buttonT"
@@ -121,7 +124,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="T"
-            android:textSize="12dp" />
+            android:textSize="12dp" 
+             android:background="@drawable/button_background_tecla"/>
 
         <Button
             android:id="@+id/buttonY"
@@ -132,7 +136,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="Y"
-            android:textSize="12dp" />
+            android:textSize="12dp" 
+             android:background="@drawable/button_background_tecla"/>
 
         <Button
             android:id="@+id/buttonU"
@@ -143,7 +148,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="U"
-            android:textSize="12dp" />
+            android:textSize="12dp" 
+             android:background="@drawable/button_background_tecla"/>
 
         <Button
             android:id="@+id/buttonI"
@@ -154,7 +160,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="I"
-            android:textSize="12dp" />
+            android:textSize="12dp" 
+             android:background="@drawable/button_background_tecla"/>
 
         <Button
             android:id="@+id/buttonO"
@@ -165,7 +172,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="O"
-            android:textSize="12dp" />
+            android:textSize="12dp" 
+             android:background="@drawable/button_background_tecla"/>
 
         <Button
             android:id="@+id/buttonP"
@@ -176,7 +184,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="P"
-            android:textSize="12dp" />
+            android:textSize="12dp" 
+             android:background="@drawable/button_background_tecla"/>
     </TableRow>
     
     <TableRow
@@ -192,9 +201,10 @@
             android:height="45dp"
             android:minHeight="45dp"
             android:minWidth="11dp"
-            android:width="31dp"
             android:text="A"
-            android:textSize="12dp" />
+            android:textSize="12dp"
+            android:width="31dp" 
+             android:background="@drawable/button_background_tecla"/>
 
         <Button
             android:id="@+id/buttonS"
@@ -205,7 +215,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="S"
-            android:textSize="12dp" />
+            android:textSize="12dp" 
+             android:background="@drawable/button_background_tecla"/>
 
         <Button
             android:id="@+id/buttonD"
@@ -216,7 +227,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="D"
-            android:textSize="12dp" />
+            android:textSize="12dp" 
+             android:background="@drawable/button_background_tecla"/>
 
         <Button
             android:id="@+id/buttonF"
@@ -227,7 +239,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="F"
-            android:textSize="12dp" />
+            android:textSize="12dp" 
+             android:background="@drawable/button_background_tecla"/>
 
         <Button
             android:id="@+id/buttonG"
@@ -238,7 +251,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="G"
-            android:textSize="12dp" />
+            android:textSize="12dp" 
+             android:background="@drawable/button_background_tecla"/>
 
         <Button
             android:id="@+id/buttonH"
@@ -249,7 +263,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="H"
-            android:textSize="12dp" />
+            android:textSize="12dp" 
+             android:background="@drawable/button_background_tecla"/>
 
         <Button
             android:id="@+id/buttonJ"
@@ -260,7 +275,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="J"
-            android:textSize="12dp" />
+            android:textSize="12dp"
+             android:background="@drawable/button_background_tecla" />
 
         <Button
             android:id="@+id/buttonK"
@@ -271,7 +287,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="K"
-            android:textSize="12dp" />
+            android:textSize="12dp" 
+             android:background="@drawable/button_background_tecla"/>
 
         <Button
             android:id="@+id/buttonL"
@@ -282,7 +299,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="L"
-            android:textSize="12dp" />
+            android:textSize="12dp"
+             android:background="@drawable/button_background_tecla" />
 
         <Button
             android:id="@+id/buttonCC"
@@ -293,7 +311,8 @@
             android:minWidth="11dp"
             android:width="31dp"
             android:text="Ç"
-            android:textSize="12dp" />
+            android:textSize="12dp" 
+             android:background="@drawable/button_background_tecla"/>
     </TableRow>
     
     <TableRow
@@ -311,7 +330,8 @@
         android:minWidth="11dp"
         android:text="Z"
         android:textSize="12dp"
-        android:width="33dp" />
+        android:width="33dp" 
+         android:background="@drawable/button_background_tecla"/>
 
     <Button
         android:id="@+id/buttonX"
@@ -322,7 +342,8 @@
         android:minWidth="11dp"
         android:text="X"
         android:textSize="12dp"
-        android:width="33dp" />
+        android:width="33dp"
+         android:background="@drawable/button_background_tecla" />
 
     <Button
         android:id="@+id/buttonC"
@@ -333,7 +354,8 @@
         android:minWidth="11dp"
         android:text="C"
         android:textSize="12dp"
-        android:width="33dp" />
+        android:width="33dp" 
+         android:background="@drawable/button_background_tecla"/>
 
     <Button
         android:id="@+id/buttonV"
@@ -344,7 +366,8 @@
         android:minWidth="11dp"
         android:width="33dp"
         android:text="V"
-        android:textSize="12dp" />
+        android:textSize="12dp" 
+         android:background="@drawable/button_background_tecla"/>
 
     <Button
         android:id="@+id/buttonB"
@@ -355,7 +378,8 @@
         android:minWidth="11dp"
         android:text="B"
         android:textSize="12dp"
-        android:width="33dp" />
+        android:width="33dp"
+         android:background="@drawable/button_background_tecla" />
 
     <Button
         android:id="@+id/buttonN"
@@ -366,7 +390,8 @@
         android:minWidth="11dp"
         android:text="N"
         android:textSize="12dp"
-        android:width="33dp" />
+        android:width="33dp" 
+         android:background="@drawable/button_background_tecla"/>
 
     <Button
         android:id="@+id/buttonM"
@@ -377,7 +402,8 @@
         android:minWidth="11dp"
         android:text="M"
         android:textSize="12dp"
-        android:width="33dp" />
+        android:width="33dp" 
+         android:background="@drawable/button_background_tecla"/>
 </TableRow>
 
 </LinearLayout>
