@@ -226,7 +226,7 @@ public class JogoActivity extends Activity {
 		venceu = venceu + espacos;
 		
 		//Exibe na tela os resultados
-		status.setText("Rodadas: " + jg.getRodadas() + " -" + " Vitórias: " + jg.getVitorias() + " -" + " Derrotas: " + jg.getDerrotas()  + "\n" +"Percentual: " + jg.getAverage() + "%" + " - " + "Pontos: " + jg.getPontos());
+		status.setText("Rodadas: " + jg.getRodadas() + " -" + " Vitórias: " + jg.getVitorias() + " -" + " Derrotas: " + jg.getDerrotas()  + "\n" +"Percentual: " +  String.format("%.2f", jg.getAverage())  + "%" + " - " + "Pontos: " + jg.getPontos());
 
 	}
 	
