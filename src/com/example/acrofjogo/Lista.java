@@ -28,6 +28,7 @@ public class Lista extends Activity {
 		TextView texto;
 		@Override
 		protected void onCreate(Bundle savedInstanceState) {
+			requestWindowFeature(Window.FEATURE_NO_TITLE);
 			super.onCreate(savedInstanceState);
 			
 			PalavraDAO db = new PalavraDAO(this);

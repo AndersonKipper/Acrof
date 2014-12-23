@@ -21,6 +21,7 @@ public class PartidaActivity extends Activity {
 	ImageView img;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		super.onCreate(savedInstanceState);
 		
 		//Ao iniciar o sistema cria as tabelas do banco caso ainda não exista.
