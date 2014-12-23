@@ -25,6 +25,7 @@ public class JogadorDAO extends DaoGenerico {
 		values.put("RODADAS", jg.getRodadas());
 		values.put("VITORIAS", jg.getVitorias());
 		values.put("DERROTAS", jg.getDerrotas());
+		values.put("PONTOS", jg.getPontos());
 		values.put("AVERAGE", jg.getAverage());
 					
 		String id = String.valueOf(jg.getIdJogador());
@@ -72,6 +73,7 @@ public class JogadorDAO extends DaoGenerico {
 			jg.setRodadas(c.getInt(c.getColumnIndex("RODADAS")));
 			jg.setVitorias(c.getInt(c.getColumnIndex("VITORIAS")));
 			jg.setDerrotas(c.getInt(c.getColumnIndex("DERROTAS")));
+			jg.setPontos(c.getInt(c.getColumnIndex("PONTOS")));
 			jg.setAverage(c.getDouble(c.getColumnIndex("AVERAGE")));
 
 				
