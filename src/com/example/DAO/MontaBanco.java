@@ -17,6 +17,7 @@ public class MontaBanco extends DaoGenerico {
             " RODADAS integer, " +
             " VITORIAS integer, " +
             " DERROTAS integer, " +
+            " PONTOS integer, " +
             " AVERAGE double " +
             " );";
 
@@ -40,7 +41,7 @@ public class MontaBanco extends DaoGenerico {
 		
 		if(dao.quantRegistro() == 0){
 			dbOpen();
-			db.execSQL("INSERT INTO JOGADOR(NOMEJOGADOR, RODADAS, VITORIAS, DERROTAS, AVERAGE) VALUES('Player 1', 0, 0, 0, 100.00)");
+			db.execSQL("INSERT INTO JOGADOR(NOMEJOGADOR, RODADAS, VITORIAS, DERROTAS, PONTOS, AVERAGE) VALUES('Player 1', 0, 0, 0, 0, 100.00)");
 			dbClose();
 		}
 

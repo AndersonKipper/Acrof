@@ -10,6 +10,7 @@ public class Jogador {
 	private Integer rodadas;
 	private Integer vitorias;
 	private Integer derrotas;
+	private Integer pontos;
 	private Double average; //Percentual de vitórias.
 	
 	public String getNomeJogador() {
@@ -35,6 +36,12 @@ public class Jogador {
 	}
 	public void setDerrotas(Integer derrotas) {
 		this.derrotas = derrotas;
+	}
+	public void setPontos(Integer pontos){
+		this.pontos = pontos;
+	}
+	public Integer getPontos(){
+		return pontos;
 	}
 	public Double getAverage() {
 		return average;

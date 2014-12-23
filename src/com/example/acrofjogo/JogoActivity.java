@@ -226,7 +226,7 @@ public class JogoActivity extends Activity {
 		venceu = venceu + espacos;
 		
 		//Exibe na tela os resultados
-		status.setText("Rodadas: " + jg.getRodadas() + " -" + " Vitórias: " + jg.getVitorias() + " -" + " Derrotas: " + jg.getDerrotas()  + "\n" +"Percentual: " + jg.getAverage() + "%");
+		status.setText("Rodadas: " + jg.getRodadas() + " -" + " Vitórias: " + jg.getVitorias() + " -" + " Derrotas: " + jg.getDerrotas()  + "\n" +"Percentual: " + jg.getAverage() + "%" + " - " + "Pontos: " + jg.getPontos());
 
 	}
 	
@@ -373,6 +373,19 @@ public class JogoActivity extends Activity {
 				
 				//Calcula o percentual de vitórias
 				jg.setAverage (((double)jg.getVitorias() / (double)jg.getRodadas()) * 100.0);
+				
+				//Atualiza os pontos
+				if(MainActivity.nivel == "DIFICIL"){
+					jg.setPontos(jg.getPontos()+100);
+				}
+				else{
+					if(MainActivity.nivel == "MEDIO"){
+						jg.setPontos(jg.getPontos()+50);
+					}
+					else{
+						jg.setPontos(jg.getPontos()+10);
+					}
+				}
 				
 				//Atualiza o banco
 				daoJg.atualizar(jg);
