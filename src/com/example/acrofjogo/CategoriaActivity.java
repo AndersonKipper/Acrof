@@ -20,7 +20,7 @@ public class CategoriaActivity extends Activity {
 
 	private Button times;
 	private Button paises;
-	private TextView status;
+	//private TextView status;
 	
 	
 	
@@ -31,8 +31,8 @@ public class CategoriaActivity extends Activity {
 		
 		setContentView(R.layout.activity_categoria);
 		
-		status = (TextView) findViewById(R.id.nivel);
-		status.setText(MainActivity.nivel);
+		//status = (TextView) findViewById(R.id.nivel);
+		//status.setText(MainActivity.nivel);
 		
 		times = (Button) findViewById(R.id.times);
 		times.setOnClickListener(new Categoria("TIMES"));

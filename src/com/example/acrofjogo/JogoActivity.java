@@ -509,7 +509,7 @@ public void mudaTela(int tela){
 						
 						//Atualiza o banco
 						daoJg.atualizar(jg);
-						startActivity(new Intent(c, ContinuarActivity.class));
+						startActivity(new Intent(c, MainActivity.class));
 		            	finish();
 		            }
 		        })
