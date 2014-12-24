@@ -32,4 +32,13 @@
         android:textColor="@color/text"
         android:width="260dp" />
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btContinuar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp"
+        android:src="@drawable/score" />
+
 </RelativeLayout>

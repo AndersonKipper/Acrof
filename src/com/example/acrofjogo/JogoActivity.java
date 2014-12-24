@@ -496,7 +496,7 @@ public void mudaTela(int tela){
 	//caso do usuario fechar o jogo
 		public void onBackPressed() {
 		    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(c);
-		    alertDialogBuilder.setIcon(R.drawable.ic_launcher);
+		    alertDialogBuilder.setIcon(R.drawable.ic);
 		    alertDialogBuilder.setTitle("Jogo da Forca");
 		 
 		    alertDialogBuilder.setMessage("Desistir da Partida?").setCancelable(false).setPositiveButton("Sim",
@@ -509,7 +509,7 @@ public void mudaTela(int tela){
 						
 						//Atualiza o banco
 						daoJg.atualizar(jg);
-						startActivity(new Intent(c, MainActivity.class));
+					//	startActivity(new Intent(c, MainActivity.class));
 		            	finish();
 		            }
 		        })

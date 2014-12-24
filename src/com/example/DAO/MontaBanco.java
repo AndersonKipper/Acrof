@@ -1,6 +1,7 @@
 package com.example.DAO;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 
@@ -46,4 +47,11 @@ public class MontaBanco extends DaoGenerico {
 		}
 
   }
+  
+  public void onUpgrade(SQLiteDatabase database, int versaoAntiga,
+			int versaoNova) {
+		String sql = "DROP TABLE IF EXISTS " + JOGADOR;
+		database.execSQL(sql);
+		onCreate(database);
+	}
 }
