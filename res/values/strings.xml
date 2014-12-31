@@ -12,6 +12,10 @@
     
     <string name="times">Times</string>
     <string name="paises">Países</string>
+    <string name="animais">Animais</string>
+    <string name="objetos">Objetos</string>
+    <string name="profissoes">Profissões</string>
+    <string name="frutas">Frutas</string>
     <string name="action_settings">Settings</string>
 
 </resources>

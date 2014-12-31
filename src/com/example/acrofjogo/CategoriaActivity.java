@@ -20,6 +20,10 @@ public class CategoriaActivity extends Activity {
 
 	private Button times;
 	private Button paises;
+	private Button animais;
+	private Button objetos;
+	private Button frutas;
+	private Button profissoes;
 	//private TextView status;
 	
 	
@@ -39,6 +43,18 @@ public class CategoriaActivity extends Activity {
 		
 		paises = (Button) findViewById(R.id.paises);
 		paises.setOnClickListener(new Categoria("PAISES"));
+		
+		animais = (Button) findViewById(R.id.animais);
+		animais.setOnClickListener(new Categoria("ANIMAIS"));
+		
+		objetos = (Button) findViewById(R.id.objetos);
+		objetos.setOnClickListener(new Categoria("OBJETOS"));
+		
+		frutas = (Button) findViewById(R.id.frutas);
+		frutas.setOnClickListener(new Categoria("FRUTAS"));
+		
+		profissoes = (Button) findViewById(R.id.profissoes);
+		profissoes.setOnClickListener(new Categoria("PROFISSOES"));
 		
 		
 		

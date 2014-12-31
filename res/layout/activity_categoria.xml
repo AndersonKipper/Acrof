@@ -4,33 +4,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/paisagem_efeito"
     android:orientation="vertical" >
-
-   
-
-    <Button
-        android:id="@+id/times"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="11dp"
-        android:layout_y="164dp"
-        android:height="50dp"
-        android:text="@string/times"
-        android:width="140dp" 
-        style="@style/BootstrapButton"
-        android:textColor="@color/text"/>
-     <Button
-        android:id="@+id/paises"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="167dp"
-        android:layout_y="164dp"
-        android:height="50dp"
-        android:text="@string/paises"
-        android:width="140dp"
-        style="@style/BootstrapButton"
-        android:textColor="@color/text" />
-
-     
      <TextView
          android:id="@+id/nivel"
          android:layout_width="wrap_content"
@@ -39,5 +12,85 @@
          android:layout_y="14dp"
          android:text=""
          android:textSize="20dp" />
+
+     <Button
+         android:id="@+id/animais"
+         style="@style/BootstrapButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_x="12dp"
+         android:layout_y="166dp"
+         android:height="50dp"
+         android:text="@string/animais"
+         android:textColor="@color/text"
+         android:width="140dp" />
+
+     <ImageView
+         android:id="@+id/imageView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="47dp"
+         android:layout_x="64dp"
+         android:layout_y="40dp"
+         android:src="@drawable/titulo" />
+     
+     <Button
+         android:id="@+id/paises"
+         style="@style/BootstrapButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_x="12dp"
+         android:layout_y="238dp"
+         android:height="50dp"
+         android:text="@string/paises"
+         android:textColor="@color/text"
+         android:width="140dp" />
+
+     <Button
+         android:id="@+id/frutas"
+         style="@style/BootstrapButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_x="167dp"
+         android:layout_y="167dp"
+         android:height="50dp"
+         android:text="@string/frutas"
+         android:textColor="@color/text"
+         android:width="140dp" />
+     <Button
+         android:id="@+id/objetos"
+         style="@style/BootstrapButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_x="165dp"
+         android:layout_y="238dp"
+         android:height="50dp"
+         android:text="@string/objetos"
+         android:textColor="@color/text"
+         android:width="140dp" />
+
+     <Button
+         android:id="@+id/profissoes"
+         style="@style/BootstrapButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_x="168dp"
+         android:layout_y="302dp"
+         android:height="50dp"
+         android:text="@string/profissoes"
+         android:textColor="@color/text"
+         android:width="140dp" />
+
+     <Button
+         android:id="@+id/times"
+         style="@style/BootstrapButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_x="13dp"
+         android:layout_y="306dp"
+         android:height="50dp"
+         android:text="@string/times"
+         android:textColor="@color/text"
+         android:width="140dp" />
 
 </AbsoluteLayout>
