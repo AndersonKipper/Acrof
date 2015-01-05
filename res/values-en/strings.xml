@@ -11,6 +11,11 @@
     
     <string name="times">Soccer Teams</string>
     <string name="paises">Countries</string>
+    <string name="animais">Animals</string>
+    <string name="objetos">Objects</string>
+    <string name="profissoes">Professions</string>
+    <string name="frutas">Fruits</string>
+    <string name="continuar">Continue</string>
     <string name="action_settings">Settings</string>
 
 </resources>

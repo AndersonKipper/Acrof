@@ -1,6 +1,8 @@
 package com.example.acrofjogo;
 
 
+import java.util.ArrayList;
+
 import com.example.DAO.MontaBanco;
 import com.example.DAO.PalavraDAO;
 
@@ -17,7 +19,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	public static String nivel="";
-	public static String categoria="";
+	public static ArrayList<String> categoria = new ArrayList<String>();
     private Button novoJogo;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

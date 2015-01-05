@@ -653,7 +653,7 @@ INSERT INTO palavras (palavra, categoria, nivel) VALUES( 'GOVERNADOR', 'PROFISSO
 INSERT INTO palavras (palavra, categoria, nivel) VALUES( 'GOVERNANTA', 'PROFISSOES', 'MEDIO');
 INSERT INTO palavras (palavra, categoria, nivel) VALUES( 'GERIATRA', 'PROFISSOES', 'MEDIO');
 INSERT INTO palavras (palavra, categoria, nivel) VALUES( 'GINECOLOGISTA', 'PROFISSOES', 'MEDIO');
-INSERT INTO palavras (palavra, categoria, nivel) VALUES( 'GUARDA', 'PROFISSOES', FACIL');
+INSERT INTO palavras (palavra, categoria, nivel) VALUES( 'GUARDA', 'PROFISSOES', 'FACIL');
 INSERT INTO palavras (palavra, categoria, nivel) VALUES( 'GERENTE', 'PROFISSOES', 'FACIL');
 INSERT INTO palavras (palavra, categoria, nivel) VALUES( 'HISTORIADOR', 'PROFISSOES', 'DIFICIL');
 INSERT INTO palavras (palavra, categoria, nivel) VALUES( 'HEMATOLOGISTA', 'PROFISSOES', 'DIFICIL');
@@ -749,4 +749,3 @@ INSERT INTO palavras (palavra, categoria, nivel) VALUES( 'XILÓGRAFO', 'PROFISSOE
 INSERT INTO palavras (palavra, categoria, nivel) VALUES( 'ZOÓLOGO', 'PROFISSOES', 'DIFICIL');
 INSERT INTO palavras (palavra, categoria, nivel) VALUES( 'ZOOTECNISTA', 'PROFISSOES', 'DIFICIL');
 INSERT INTO palavras (palavra, categoria, nivel) VALUES( 'ZELADOR', 'PROFISSOES', 'MEDIO');
-

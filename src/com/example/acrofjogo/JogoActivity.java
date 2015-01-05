@@ -40,7 +40,7 @@ public class JogoActivity extends Activity {
 	ImageView img;
 	int testaTentativa = 0; // testa se tentativa mudou
 	int tamPalavra = 0;
-	
+	String categoria = "";
 	
 	private Button buttonQ;
 	private Button buttonW;
@@ -183,6 +183,9 @@ public class JogoActivity extends Activity {
 		
 		
 		palavra= db.getPalavra(MainActivity.nivel, MainActivity.categoria);
+		categoria = db.getCategoria();
+		
+		Toast.makeText(c, "Categoria é: " + categoria, Toast.LENGTH_LONG).show();
 		
 
 		//explicar o q acontece aqui, tamPalavra recebe o tamanho da palavra gerada, contasse os espaços cria um 'nova' string que recebe palavra com espaços e depois palavra recebe 'nova',

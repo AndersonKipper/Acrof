@@ -2,6 +2,8 @@ package com.example.acrofjogo;
 
 
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 
 
@@ -14,17 +16,23 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 public class CategoriaActivity extends Activity {
 
-	private Button times;
-	private Button paises;
-	private Button animais;
-	private Button objetos;
-	private Button frutas;
-	private Button profissoes;
+	private CheckBox times;
+	private CheckBox paises;
+	private CheckBox animais;
+	private CheckBox objetos;
+	private CheckBox frutas;
+	private CheckBox profissoes;
+	
+	private Button continua;
 	//private TextView status;
+	
+	
 	
 	
 	
@@ -38,23 +46,20 @@ public class CategoriaActivity extends Activity {
 		//status = (TextView) findViewById(R.id.nivel);
 		//status.setText(MainActivity.nivel);
 		
-		times = (Button) findViewById(R.id.times);
-		times.setOnClickListener(new Categoria("TIMES"));
+		times = (CheckBox) findViewById(R.id.times);
 		
-		paises = (Button) findViewById(R.id.paises);
-		paises.setOnClickListener(new Categoria("PAISES"));
+		paises = (CheckBox) findViewById(R.id.paises);
 		
-		animais = (Button) findViewById(R.id.animais);
-		animais.setOnClickListener(new Categoria("ANIMAIS"));
+		animais = (CheckBox) findViewById(R.id.animais);
 		
-		objetos = (Button) findViewById(R.id.objetos);
-		objetos.setOnClickListener(new Categoria("OBJETOS"));
+		objetos = (CheckBox) findViewById(R.id.objetos);
 		
-		frutas = (Button) findViewById(R.id.frutas);
-		frutas.setOnClickListener(new Categoria("FRUTAS"));
+		frutas = (CheckBox) findViewById(R.id.frutas);
 		
-		profissoes = (Button) findViewById(R.id.profissoes);
-		profissoes.setOnClickListener(new Categoria("PROFISSOES"));
+		profissoes = (CheckBox) findViewById(R.id.profissoes);
+		
+		continua = (Button) findViewById(R.id.continuar);
+		continua.setOnClickListener(new Categoria());
 		
 		
 		
@@ -70,15 +75,37 @@ public class CategoriaActivity extends Activity {
 	
 	public class Categoria implements OnClickListener{
 
-		String categoria;
-		 public Categoria(String cat) {
-			// TODO Auto-generated constructor stub
-			categoria = cat;
-		}
-
+		String categoria = "";
+	
 		@Override
 		public void onClick(View v) {
-			 MainActivity.categoria = categoria;
+			ArrayList<String> categ = new ArrayList<String>(); 
+			
+			if(animais.isChecked()){
+				categ.add("ANIMAIS");
+			}
+			
+			if(frutas.isChecked()){
+				categ.add("FRUTAS");
+			}
+			
+			if(paises.isChecked()){
+				categ.add("PAISES");
+			}
+			
+			if(objetos.isChecked()){
+				categ.add("OBJETOS");
+			}
+			
+			if(times.isChecked()){
+				categ.add("TIMES");
+			}
+			
+			if(profissoes.isChecked()){
+				categ.add("PROFISSOES");
+			}
+			
+			 MainActivity.categoria = categ;
 				jogo(v);
 			
 			
@@ -97,7 +124,7 @@ public class CategoriaActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
+		// automatically handle clicks on the Home/Up CheckBox, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
