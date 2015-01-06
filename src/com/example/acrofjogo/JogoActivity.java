@@ -15,6 +15,7 @@ import android.graphics.Color;
 
 import android.os.Bundle;
 import android.support.v4.widget.SearchViewCompat.OnCloseListenerCompat;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -185,8 +186,9 @@ public class JogoActivity extends Activity {
 		palavra= db.getPalavra(MainActivity.nivel, MainActivity.categoria);
 		categoria = db.getCategoria();
 		
-		Toast.makeText(c, "Categoria é: " + categoria, Toast.LENGTH_LONG).show();
-		
+		Toast toast = Toast.makeText(c, "Categoria é " + categoria, Toast.LENGTH_LONG);
+		toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
+		toast.show();
 
 		//explicar o q acontece aqui, tamPalavra recebe o tamanho da palavra gerada, contasse os espaços cria um 'nova' string que recebe palavra com espaços e depois palavra recebe 'nova',
 		//esconde recebe palavra e trca por _ e lanca na textview.
