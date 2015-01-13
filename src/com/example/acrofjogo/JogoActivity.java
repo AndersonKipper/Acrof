@@ -219,6 +219,10 @@ public class JogoActivity extends Activity {
 		for(Character i='A'; i <= 'Z'; i++){
 			esconde = esconde.replace(i, '_');
 		}
+		//Este for é para as letras com acento
+		for(Character i=192; i <= 218; i++){
+			esconde = esconde.replace(i, '_');
+		}
 		//Exibe a palavra escondida na tela
 		t.setText(esconde);
 		
@@ -248,6 +252,8 @@ public class JogoActivity extends Activity {
 				
 				int acertou=0;
 				//Se siver substitui o '-' pela letra
+				
+				
 				if(palavra.charAt(i)==l){
 					achou.setCharAt(i, l);
 					b.setBackgroundResource(R.drawable.button_background_pressed);
@@ -263,6 +269,162 @@ public class JogoActivity extends Activity {
 						tentativas--;
 					}
 				}
+				
+				//Estes ifs são para comparar os caracters acentuados
+				if(l=='A'){
+					if(palavra.charAt(i)=='Ã'){
+						achou.setCharAt(i, 'Ã');
+						b.setBackgroundResource(R.drawable.button_background_pressed);
+						//b.setMinWidth(25);
+						b.setEnabled(false); 
+						venceu++;
+						
+						y++;
+						acertou++;
+						//Para não diminuir mais de uma vez para a mesma letra, se tiver mais de uma vez a mesma letra na palavra
+						if(y <= 1){
+							//Se acertou diminui para não somar lá embaixo (gambiarra aqui)
+							tentativas--;
+						}
+					}
+					
+					if(palavra.charAt(i)=='Á'){
+						achou.setCharAt(i, 'Á');
+						b.setBackgroundResource(R.drawable.button_background_pressed);
+						//b.setMinWidth(25);
+						b.setEnabled(false); 
+						venceu++;
+						
+						y++;
+						acertou++;
+						//Para não diminuir mais de uma vez para a mesma letra, se tiver mais de uma vez a mesma letra na palavra
+						if(y <= 1){
+							//Se acertou diminui para não somar lá embaixo (gambiarra aqui)
+							tentativas--;
+						}
+					}
+				}
+				
+				if(l=='E'){
+					if(palavra.charAt(i)=='É'){
+						achou.setCharAt(i, 'É');
+						b.setBackgroundResource(R.drawable.button_background_pressed);
+						//b.setMinWidth(25);
+						b.setEnabled(false); 
+						venceu++;
+						
+						y++;
+						acertou++;
+						//Para não diminuir mais de uma vez para a mesma letra, se tiver mais de uma vez a mesma letra na palavra
+						if(y <= 1){
+							//Se acertou diminui para não somar lá embaixo (gambiarra aqui)
+							tentativas--;
+						}
+					}
+					
+					if(palavra.charAt(i)=='Ê'){
+						achou.setCharAt(i, 'Ê');
+						b.setBackgroundResource(R.drawable.button_background_pressed);
+						//b.setMinWidth(25);
+						b.setEnabled(false); 
+						venceu++;
+						
+						y++;
+						acertou++;
+						//Para não diminuir mais de uma vez para a mesma letra, se tiver mais de uma vez a mesma letra na palavra
+						if(y <= 1){
+							//Se acertou diminui para não somar lá embaixo (gambiarra aqui)
+							tentativas--;
+						}
+					}
+				}
+				
+				if(l=='I'){
+					if(palavra.charAt(i)=='Í'){
+						achou.setCharAt(i, 'Í');
+						b.setBackgroundResource(R.drawable.button_background_pressed);
+						//b.setMinWidth(25);
+						b.setEnabled(false); 
+						venceu++;
+						
+						y++;
+						acertou++;
+						//Para não diminuir mais de uma vez para a mesma letra, se tiver mais de uma vez a mesma letra na palavra
+						if(y <= 1){
+							//Se acertou diminui para não somar lá embaixo (gambiarra aqui)
+							tentativas--;
+						}
+					}
+				}
+				
+				if(l=='O'){
+					if(palavra.charAt(i)=='Ó'){
+						achou.setCharAt(i, 'Ó');
+						b.setBackgroundResource(R.drawable.button_background_pressed);
+						//b.setMinWidth(25);
+						b.setEnabled(false); 
+						venceu++;
+						
+						y++;
+						acertou++;
+						//Para não diminuir mais de uma vez para a mesma letra, se tiver mais de uma vez a mesma letra na palavra
+						if(y <= 1){
+							//Se acertou diminui para não somar lá embaixo (gambiarra aqui)
+							tentativas--;
+						}
+					}
+					
+					if(palavra.charAt(i)=='Õ'){
+						achou.setCharAt(i, 'Õ');
+						b.setBackgroundResource(R.drawable.button_background_pressed);
+						//b.setMinWidth(25);
+						b.setEnabled(false); 
+						venceu++;
+						
+						y++;
+						acertou++;
+						//Para não diminuir mais de uma vez para a mesma letra, se tiver mais de uma vez a mesma letra na palavra
+						if(y <= 1){
+							//Se acertou diminui para não somar lá embaixo (gambiarra aqui)
+							tentativas--;
+						}
+					}
+					
+					if(palavra.charAt(i)=='Ô'){
+						achou.setCharAt(i, 'Ô');
+						b.setBackgroundResource(R.drawable.button_background_pressed);
+						//b.setMinWidth(25);
+						b.setEnabled(false); 
+						venceu++;
+						
+						y++;
+						acertou++;
+						//Para não diminuir mais de uma vez para a mesma letra, se tiver mais de uma vez a mesma letra na palavra
+						if(y <= 1){
+							//Se acertou diminui para não somar lá embaixo (gambiarra aqui)
+							tentativas--;
+						}
+					}
+				}
+				
+				if(l=='U'){
+					if(palavra.charAt(i)=='Ú'){
+						achou.setCharAt(i, 'Ú');
+						b.setBackgroundResource(R.drawable.button_background_pressed);
+						//b.setMinWidth(25);
+						b.setEnabled(false); 
+						venceu++;
+						
+						y++;
+						acertou++;
+						//Para não diminuir mais de uma vez para a mesma letra, se tiver mais de uma vez a mesma letra na palavra
+						if(y <= 1){
+							//Se acertou diminui para não somar lá embaixo (gambiarra aqui)
+							tentativas--;
+						}
+					}
+				}
+				
 				if(y == 0){
 					b.setBackgroundResource(R.drawable.button_background_wrong);
 					//b.setMinWidth(25);
