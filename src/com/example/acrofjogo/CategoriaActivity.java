@@ -9,6 +9,7 @@ import android.app.Activity;
 
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -69,6 +70,14 @@ public class CategoriaActivity extends Activity {
 	
 	//metodo somente para TESTES
 	public void jogo(View v){
+		Configuration config = getResources().getConfiguration();
+		
+		  // if (config.screenWidthDp >= 100) {
+	            setContentView(R.layout.activity_partida_xlarge);
+	       // } else {
+	          //  setContentView(R.layout.activity_partida);
+	      //  }
+		   
 		startActivity(new Intent(this, JogoActivity.class));
 		finish();
 	}

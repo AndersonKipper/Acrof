@@ -11,6 +11,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 
 import android.os.Bundle;
@@ -80,7 +81,13 @@ public class JogoActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_partida);
+		Configuration config = getResources().getConfiguration();
+		
+		  // if (config.screenWidthDp >= 100) {
+	            setContentView(R.layout.activity_partida_xlarge);
+	      //  } else {
+	            setContentView(R.layout.activity_partida);
+	     //   }
 		
 		c = this;
 		img = (ImageView) findViewById(R.id.imageView1);
@@ -483,6 +490,7 @@ public class JogoActivity extends Activity {
 			           });      
 			    
 			  
+			    
 			     builder.show();
 				
 			/*

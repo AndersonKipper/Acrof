@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paisagem_efeito"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/facil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="184dp"
+        android:height="55dp"
+        android:text="@string/facil"
+        android:width="260dp"
+        android:onClick="setFacil" 
+        style="@style/BootstrapButton"
+        android:textColor="@color/text" />
+
+    <Button
+        android:id="@+id/medio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/facil"
+        android:layout_centerHorizontal="true"
+        android:height="55dp"
+        android:text="@string/medio"
+        android:width="260dp"
+        android:onClick="setMedio"
+        style="@style/BootstrapButton"
+        android:textColor="@color/text"  />
+
+    <Button
+        android:id="@+id/dificil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medio"
+        android:layout_centerHorizontal="true"
+        android:height="55dp"
+        android:text="@string/dificil"
+        android:width="260dp"
+        android:onClick="setDificil"
+        style="@style/BootstrapButton"
+        android:textColor="@color/text" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp"
+        android:src="@drawable/titulo" />
+
+</RelativeLayout>

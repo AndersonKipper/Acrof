@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paisagem_efeito"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/nivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="105dp"
+        android:layout_y="14dp"
+        android:text=""
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:layout_x="52dp"
+        android:layout_y="38dp"
+        android:src="@drawable/titulo" />
+
+    <Button
+        android:id="@+id/continuar"
+        style="@style/BootstrapButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="95dp"
+        android:layout_y="334dp"
+        android:height="50dp"
+        android:text="@string/continuar"
+        android:textColor="@color/text"
+        android:width="140dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_x="52dp"
+        android:layout_y="199dp"
+        android:orientation="vertical" >
+
+        <CheckBox
+            android:id="@+id/animais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/animais" />
+
+        <CheckBox
+            android:id="@+id/frutas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/frutas" />
+
+        <CheckBox
+            android:id="@+id/paises"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/paises" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_x="168dp"
+        android:layout_y="200dp"
+        android:orientation="vertical" >
+
+        <CheckBox
+            android:id="@+id/objetos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/objetos" />
+
+        <CheckBox
+            android:id="@+id/times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/times" />
+
+        <CheckBox
+            android:id="@+id/profissoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profissoes" />
+    </LinearLayout>
+
+</AbsoluteLayout>

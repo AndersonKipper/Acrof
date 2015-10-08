@@ -121,9 +121,10 @@ public final class R {
         public static final int activity_main=0x7f030003;
         public static final int activity_nivel=0x7f030004;
         public static final int activity_partida=0x7f030005;
-        public static final int dialog_ganhou=0x7f030006;
-        public static final int dialog_perdeu=0x7f030007;
-        public static final int lista=0x7f030008;
+        public static final int activity_partida_xlarge=0x7f030006;
+        public static final int dialog_ganhou=0x7f030007;
+        public static final int dialog_perdeu=0x7f030008;
+        public static final int lista=0x7f030009;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -153,7 +154,7 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070002;
+        public static final int AppBaseTheme=0x7f070003;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -169,5 +170,6 @@ public final class R {
          */
         public static final int AppTheme=0x7f070000;
         public static final int BootstrapButton=0x7f070001;
+        public static final int Theme_Dialog=0x7f070002;
     }
 }
